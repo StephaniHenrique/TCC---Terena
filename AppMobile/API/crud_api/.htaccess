@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteRule ^api/students/?$ api/app.php
+RewriteRule ^api/students/([0-9]+)?$ api/app.php?id=$1
+RewriteRule ^api/student/([0-9]+)?$ api/profile.php?id=$1
+RewriteRule ^api/studentDonate/([0-9]+)?$ api/pubInative.php?id=$1
+RewriteRule ^api/teste/([0-9]+)?$ api/teste.php?id=$1
+RewriteRule ^api/count/([0-9]+)?$ api/contandoPubs.php?id=$1
+RewriteRule ^api/countHero/([0-9]+)?$ api/contandoPubsInativa.php?id=$1
+RewriteRule ^api/favorite/([0-9]+)?$ api/favoritar.php?id=$1
+RewriteRule ^api/seeFavorite/([0-9]+)?$ api/seeFavorites.php?id=$1
+RewriteRule ^api/perfilUser/([0-9]+)?$ api/usuario.php?id=$1
+RewriteRule ^api/casosAntigos/([0-9]+)?$ api/casosAntigos.php?id=$1
+RewriteRule ^api/pubs/([0-9]+)?$ api/pubOtherUsers.php?id=$1
+RewriteRule ^api/apadrinhar/([0-9]+)?$ api/apadrinhar.php?id=$1
+RewriteRule ^api/notifications/([0-9]+)?$ api/notifications.php?id=$1
+
