@@ -1,0 +1,194 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" (click)="voltarPag()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="eita"></div>
+  <div class="pageheader">
+  </div>
+  <div class="wrapper">
+    <h2>Escolha seu <br /> herói</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <ion-radio-group ngModel name="iconUsers" mode="ios" >
+        <div>
+          <div class="titlebar">
+            <h1>Destaques</h1>
+          </div>
+          <div class="contacts">
+            <ion-slides [options]="slidesOptions2">
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/BlackPanther.png">
+                  <ion-radio slot="start" value="BlackPanther" ></ion-radio>
+                </ion-item >
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/BlackWidow.png">
+                  <ion-radio slot="start" value="BlackWidow"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+             <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/DrStrange.png">
+                  <ion-radio slot="start" value="DrStrange"></ion-radio>
+                </ion-item>
+              </ion-slide>
+              
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/Storm.png">
+                  <ion-radio slot="start" value="Storm"></ion-radio>
+                </ion-item>
+              </ion-slide>
+            </ion-slides>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="titlebar">
+            <h1>Heróis</h1>
+          </div>
+          <div class="contacts">
+            <ion-slides [options]="slidesOptions2">
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/Batman.png">
+                  <ion-radio slot="start" value="Batman"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/BlackPanther.png">
+                  <ion-radio slot="start" value="BlackPanther"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/Capitão.png">
+                  <ion-radio slot="start" value="Capitão"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/Cyborg.png">
+                  <ion-radio slot="start" value="Cyborg"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/DrStrange.png">
+                  <ion-radio slot="start" value="DrStrange"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/Hulk.png">
+                  <ion-radio slot="start" value="Hulk"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/IronMan.png">
+                  <ion-radio slot="start" value="IronMan"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../../../assets/images/Icons/Rocket.png">
+                  <ion-radio slot="start" value="Rocket"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+            </ion-slides>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="titlebar">
+            <h1>Heroínas</h1>
+          </div>
+          <div class="contacts">
+            <ion-slides [options]="slidesOptions2">
+
+              <ion-slide>
+                <ion-item lines="none"> 
+                  <img src="../../assets/images/Icons/BlackCat.png">
+                  <ion-radio slot="start" value="BlackCat"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../assets/images/Icons/BlackWidow.png">
+                  <ion-radio slot="start" value="BlackWidow"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../assets/images/Icons/CapitãMarvel.png">
+                  <ion-radio slot="start" value="CapitãMarvel"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../assets/images/Icons/Gamora.png">
+                  <ion-radio slot="start" value="Gamora"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../assets/images/Icons/InvisibleWoman.png">
+                  <ion-radio slot="start" value="InvisibleWoman"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../assets/images/Icons/MulherAranha.png">
+                  <ion-radio slot="start" value="MulherAranha"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none">
+                  <img src="../../assets/images/Icons/Storm.png">
+                  <ion-radio slot="start" value="Storm"></ion-radio>
+                </ion-item>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-item lines="none"> 
+                  <img src="../../assets/images/Icons/Vespa.png">
+                  <ion-radio slot="start" value="Vespa"></ion-radio>
+                </ion-item>
+              </ion-slide>
+            </ion-slides>
+          </div>
+
+        </div>
+      </ion-radio-group>
+      <ion-button type="submit" class="ion-margin-top" expand="block"  (click)="navigateToInfo()">Salvar</ion-button>
+      
+    </form>
+  </div>
+
+</ion-content>

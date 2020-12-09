@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="end" name="add-outline" (click)="closeModal()"></ion-icon>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="eita"></div>
+  <div #pageHeader class="pageheader">
+    <h2><ion-icon name="add-outline"></ion-icon>Nova publicação</h2>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit(f)">
+    <ion-radio-group  formControlName="tituloPublicacao" mode="ios">
+      <div>
+        <div class="titlebar">
+          <h1>Selecione sua necessidade</h1>
+        </div>
+        <div class="contacts">
+          <ion-slides [options]="slidesOptions2">
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Lápis de Cor.png">
+                <ion-radio slot="start" value="Lápis de Cor"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Mochila Masculina.png">
+                <ion-radio slot="start" value="Mochila Masculina"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Mochila Feminina.png">
+                <ion-radio slot="start" value="Mochila Feminina"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Pacote de Sulfite.png">
+                <ion-radio slot="start" value="Pacote de Sulfite"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Caderno.png">
+                <ion-radio slot="start" value="Caderno"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Canetas.png">
+                <ion-radio slot="start" value="Canetas"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Conjunto de Réguas.png">
+                <ion-radio slot="start" value="Conjunto de Réguas"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Estojo Feminino.png">
+                <ion-radio slot="start" value="Estojo Feminino"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Estojo Masculino.png">
+                <ion-radio slot="start" value="Estojo Masculino"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Fichário Feminino.png">
+                <ion-radio slot="start" value="Fichário Feminino"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Fichário Masculino.png">
+                <ion-radio slot="start" value="Fichário Masculino"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Pincéis.png">
+                <ion-radio slot="start" value="Pincéis"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Tênis.png">
+                <ion-radio slot="start" value="Tênis"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-item lines="none">
+                <img src="../../../assets/images/Publicações/Tinta.png">
+                <ion-radio slot="start" value="Tinta"></ion-radio>
+              </ion-item>
+            </ion-slide>
+
+
+          </ion-slides>
+        </div>
+
+      </div>
+
+    </ion-radio-group>
+
+
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-textarea formControlName="descricaoPublicacao"></ion-textarea>
+    </ion-item>
+
+    <p>Adicione informações sobre sua necessidade como tamanho e cor</p>
+
+    <ion-item class="disabled">
+      <ion-label position="floating">codUsers</ion-label>
+      <ion-input formControlName="codUsers" disabled="true"></ion-input>
+    </ion-item>
+
+
+    <ion-button type="submit" class="ion-margin-top" expand="block">Postar</ion-button>
+
+  </form>
+
+</ion-content>

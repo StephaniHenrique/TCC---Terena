@@ -1,0 +1,109 @@
+$navbar-height: 60px;
+$circle-radius: 60px;
+$backgroundColor: #f0f0f7;
+
+
+
+
+.wrapper {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $backgroundColor;
+}
+
+.navbar {
+  position: relative;
+  height: $navbar-height;
+  min-width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px 25px 0px 0px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(82, 74, 74, 10);
+}
+
+
+
+.circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(60px - #{$circle-radius / 2});
+  margin-bottom: 0;
+  height: $circle-radius;
+  width: $circle-radius;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #8257e5;
+  z-index: 9;
+  box-shadow: 0 10px 20px rgba(82, 74, 74, 0.35);
+}
+
+
+.circle .plus-icon {
+  color: white;
+  font-size: 27px;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.icon-home,
+.icon-settings {
+  font-size: 29px;
+  color: #828282;
+  padding: 0px 12px 0px 12px;
+  border-radius: 5px;
+ 
+}
+
+
+.icon-home:hover,
+.icon-settings:hover,
+.icon-teste:hover,
+.icon-testeum:hover{
+  color:#8257e5;
+  padding: 0px 12px 0px 12px;
+  border-radius: 15px;
+  background-color:#9971f57e;
+}
+
+
+ion-icon{
+  font-size: 22px;
+  padding-top: 7px;
+}
+
+@media only screen and (max-device-width: 400px){
+  .navbar{
+   padding-left: 15px;
+   padding-right: 15px;
+  }
+
+  ion-icon{
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-device-width: 320px){
+  .navbar{
+    padding-left: 5px;
+   padding-right: 5px;
+  }
+  ion-icon{
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+.onboard-main{
+    padding: 5%;
+    height: 100%;
+    ion-fab{
+        bottom: 35px;
+        right: 28px;
+    }
+    .onboard-top{
+        margin-top: 5%;
+        ion-button{
+            text-transform: capitalize;
+            font-size: 0.9rem;
+           font-weight: 600;
+           color:  #32264D;;
+        }
+    }
+
+    .onboard-bot{
+        margin-left: 10px;
+        ion-slides{
+            padding-bottom: 38%;
+            --bullet-background: #8257e556;
+        }
+        .onb-img{
+            margin: 9% 0 8%;
+            img{
+                height: 350px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        h4{
+            font-size: 1.5rem;
+            margin-bottom: 4%;
+            color: #32264D;
+            font-weight: 600;
+        }
+        p{
+           font-size: 1rem;
+           padding: 2% 10%; 
+           color: #6A6180;
+           line-height: 25px;
+        }
+    }
+}
+
+.ios{
+    ion-slides{
+        padding-bottom: 26% !important;
+    }
+}

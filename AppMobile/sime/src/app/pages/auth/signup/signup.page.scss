@@ -1,0 +1,57 @@
+
+ion-content{
+    --background: url('../../../../assets/images/bg.png') no-repeat center center / cover !important;
+}
+
+ion-segment{
+    border-radius: 25px;
+    margin: 20px;
+    width: 90%;
+    background-color: #fff;
+    justify-content: space-around;
+}
+
+ion-segment-button{
+    color: #8257E5;
+    font-weight: 600;
+}
+
+
+img{
+    width: auto;
+    height: 145px;
+    margin-top: 200px;
+    margin-right: -205px;
+}
+
+.detail{
+    position: absolute;
+    width: 417px;
+    height: 394px;
+    right: -34%;
+    top: -15%;
+    border-radius: 50%;
+    
+    background: #8257E5;
+}
+
+
+img{
+    position: relative;
+    left: 50%;
+    padding: 20px;
+    height: auto;
+    width: 80%;
+    margin-left: -40%; 
+    margin-top: 15%;
+}
+
+form{
+    margin: 20px;
+
+    ion-item{
+        background-color: transparent;
+        width: 95%;
+    }
+}
+

@@ -1,0 +1,122 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" (click)="voltarPag()"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="eita"></div>
+  <header>
+
+    <div class="container">
+
+      <div class="profile">
+
+        <div class="profile-image">
+
+          <img src="../../../assets/images/Icons/{{userJson.iconUsers}}.png">
+
+        </div>
+
+        <div class="profile-user-settings">
+
+          <h1 class="profile-user-name">{{userJson.nomeUsers}}</h1>
+
+          <button class="btn profile-adopt-btn">Editar Perfil</button>
+
+        </div>
+
+        <div class="profile-stats">
+
+          <ul>
+            <li><span class="profile-stat-count" *ngFor="let casos of caso"> {{casos.Casos}}</span> Publicações</li>
+            <li><span class="profile-stat-count" *ngFor="let hero of heros">{{hero.Hero}}</span> Heróis</li>
+          </ul>
+
+        </div>
+
+
+      </div>
+      <!-- End of profile section -->
+
+    </div>
+    <!-- End of container -->
+
+  </header>
+
+  <div class="body">
+
+    <div class="margin">
+
+      <div>
+        <div class="titlebar">
+          <h1>Pessoas que você ajudou</h1>
+        </div>
+        <div class="contacts">
+          <ion-slides [options]="slidesOptions2">
+            <ion-slide *ngFor="let studentHappy of studentsHappy">
+              <img class="{{studentHappy.nivelEscolaridade}}"
+                src="../../../assets/images/Icons/{{studentHappy.iconUsers}}.png">
+            </ion-slide>
+          </ion-slides>
+        </div>
+
+      </div>
+
+    
+        <div class="titlebar">
+          <h1>Publicações</h1>
+        </div>
+      </div>
+
+
+    </div>
+
+        <ion-item-sliding *ngFor="let studentProfile of studentsProfile">
+          <ion-item lines="none">
+            <div class="Card">
+              <div class="Card-date">
+                <h3>{{studentProfile.mes}}</h3>
+                <h2>{{studentProfile.dia}}</h2>
+              </div>
+              <div class="Card-body">
+
+                <p>{{studentProfile.diaDaSemana}}, {{studentProfile.hora}}:{{studentProfile.minuto}}</p>
+                <h1>{{studentProfile.tituloPublicacao}}</h1>
+
+              </div>
+            </div>
+          </ion-item>
+          <ion-item-options side="end" color="transparent">
+            <ion-item-option color="transparent">
+              <ion-icon name="trash" (click)="remove(studentProfile.codPublicacaoUsuario)"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <div class="bodyOK">
+
+          <div class="margin">
+
+        <div class="Card-help" *ngFor="let studentProfileDonate of studentsProfileDonate">
+          <div class="Card-date">
+            <h3>{{studentProfileDonate.mes}}</h3>
+            <h2>{{studentProfileDonate.dia}}</h2>
+          </div>
+          <div class="Card-body">
+            <p>{{studentProfileDonate.diaDaSemana}}, {{studentProfileDonate.hora}}:{{studentProfileDonate.minuto}}</p>
+            <h1>{{studentProfileDonate.tituloPublicacao}}</h1>
+            <img class="hero" src="../../../assets/images/Icons/{{studentProfileDonate.iconUsers}}.png">
+          </div>
+        </div>
+
+        </div>
+        </div>
+
+      
+
+   
+</ion-content>

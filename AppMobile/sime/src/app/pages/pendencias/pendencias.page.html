@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" (click)="voltarPag()"></ion-icon>
+    <div class="perfil" slot="end">
+      <img src="../../../assets/images/Icons/{{userJson.iconUsers}}.png" (click)="navigateToPerfil()"/>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="pageheader">
+    
+  </div>
+  
+  <div class="wrapper" >
+    <h2>Pendências</h2>
+    
+    <div class="leaderboard" >
+  
+      <div class="leaderboard__profile" *ngFor="let pendenciasUser of pendenciaUser">
+        <img src="../../../assets/images/Icons/{{pendenciasUser.iconUsers}}.png"  class="leaderboard__picture">
+        <div class="info">
+         <p><span class="leaderboard__name">{{pendenciasUser.nomeUsers}}</span> {{pendenciasUser.descPendencias}}</p>
+        </div>
+      </div>
+    </div> 
+  </div>    
+</ion-content>

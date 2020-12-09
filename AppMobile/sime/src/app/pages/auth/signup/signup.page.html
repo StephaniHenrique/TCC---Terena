@@ -1,0 +1,42 @@
+
+<ion-content >
+
+  <img src="../../../../assets/images/login.png"/>
+
+<div padding>
+  <ion-segment [(ngModel)]="opt" color="primary" mode="md" scrollable="true">
+    <ion-segment-button value="signin" >
+      Sign In
+    </ion-segment-button>
+    <ion-segment-button value="signup">
+      Sign Up
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="opt" >
+   
+
+  <form [formGroup]="form" (submit)="onSubmit()" *ngSwitchCase="'signup'">
+    <ion-item color="transparent"> 
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input type="text" required formControlName="firstname"></ion-input>
+    </ion-item>
+    <ion-item color="transparent">
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input type="text" required formControlName="lastname"></ion-input>
+    </ion-item>
+    <ion-item color="transparent">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" required formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item color="transparent">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required formControlName="passwordRegister"></ion-input>
+    </ion-item>
+    <ion-button type="submit" class="ion-margin-top" expand="block" [disabled]="form.invalid">Register</ion-button>
+
+  </form>
+
+</div>
+</ion-content>

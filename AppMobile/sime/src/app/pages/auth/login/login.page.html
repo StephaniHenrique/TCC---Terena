@@ -1,0 +1,90 @@
+
+<ion-content >
+
+    <img src="../../../../assets/images/login.png"/>
+
+  <div padding>
+    <ion-segment [(ngModel)]="opt" value="signin" >
+      <ion-segment-button value="signin" >
+        Entrar
+      </ion-segment-button>
+      <ion-segment-button value="signup">
+        Cadastrar
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="opt" >
+    <div *ngSwitchCase="'signin'">
+      <form [formGroup]="formLogin" (submit)="onSubmit()" >
+
+        <ion-item color="transparent">
+          <ion-label position="floating" >
+            <ion-icon name="mail-outline"></ion-icon>
+            E-mail
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="username" required formControlName="username" ></ion-input>
+        </ion-item>
+
+        <ion-item color="transparent">
+          <ion-label position="floating" >
+            <ion-icon name="key-outline"></ion-icon>
+           Senha
+          </ion-label>
+          <ion-input type="password" required formControlName="password"></ion-input>
+        </ion-item>
+
+        <a>Esqueceu sua senha?</a>
+        <ion-button type="submit" class="ion-margin-top" expand="block" [disabled]="formLogin.invalid" >Entrar</ion-button>
+      </form>
+
+      <div class="sep">
+        <hr>
+        <p>Ou conecte-se com</p>
+        <hr>
+      </div>
+      <div class="buttons">
+        <ion-button class="facebook">Facebook</ion-button>
+        <ion-button class="google">Google</ion-button>
+      </div>
+      <p class="toSignup">Primeira vez no Simetria? <a>Cadastre-se</a></p>
+    </div>
+
+    <div *ngSwitchCase="'signup'">  
+    <form [formGroup]="form" (submit)="onSubmitRegister()" >
+    
+      <ion-item color="transparent">
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="text" required formControlName="username"></ion-input>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" required formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-label position="floating">Confirme sua senha</ion-label>
+        <ion-input type="password" required formControlName="password"></ion-input>
+      </ion-item>
+      <div class="terms">
+        <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+        <ion-label >Concordo com os termos de uso</ion-label>
+      </div>
+
+      <ion-button  class="register" type="submit" class="ion-margin-top" expand="block" [disabled]="form.invalid">Cadastrar</ion-button>
+
+    </form>
+
+    <div class="sep-register">
+      <hr>
+      <p>Ou conecte-se com</p>
+      <hr>
+    </div>
+    <div class="buttons">
+      <ion-button class="facebook">Facebook</ion-button>
+      <ion-button class="google">Google</ion-button>
+    </div>
+    <p class="toSignup">Já possui conta? Faça o<a>Log in</a></p>
+</div>
+  </div>
+</ion-content>
+

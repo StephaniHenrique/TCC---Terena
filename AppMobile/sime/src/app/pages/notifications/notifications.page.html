@@ -1,0 +1,136 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <div class="perfil" slot="start">
+      <img src="../../../assets/images/Icons/{{userJson.iconUsers}}.png" (click)="navigateToPerfil()" />
+    </div>
+    <ion-icon name="notifications-outline" slot="end" (click)="navigateToPendencies()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="eita"></div>
+  <div #pageHeader class="pageheader">
+    <h2>Descubra novos <br /> casos</h2>
+    <ion-searchbar placeholder="Pesquisar" 
+                    [(ngModel)]="queryText" 
+                    (ionInput)="filterPubs($event)"
+                    clearInput>
+    </ion-searchbar>
+  </div>
+
+  
+
+  <!--
+  <div class="buscaContainer">
+    <div class="busca">
+      <div class="inicio">
+        <p>
+          <ion-icon name="location-outline"></ion-icon>
+          &nbsp; &nbsp; Filtrar por localização
+        </p>
+      </div>
+      <div class="final">
+        <p>
+          <ion-icon [name]="initialStep > 0 ? 'chevron-up-outline' : 'chevron-down-outline'" (click)="toggleBlocks()">
+          </ion-icon>
+        </p>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="pesquisa" #background>
+    <div class="firstLine">
+      <div class="content">
+        <div class="titlebar">
+          <h1>Estado</h1>
+        </div>
+
+        <ion-select value="Selecione">
+          <ion-select-option value="Selecione">Selecione</ion-select-option>
+          <ion-select-option value="cat">Cat</ion-select-option>
+          <ion-select-option value="um">Dog</ion-select-option>
+        </ion-select>
+      </div>
+
+      <div class="content">
+        <div class="titlebar">
+          <h1>Cidade</h1>
+        </div>
+
+        <ion-select value="Selecione">
+          <ion-select-option value="Selecione">Selecione</ion-select-option>
+          <ion-select-option value="cat">Cat</ion-select-option>
+          <ion-select-option value="dog">Dog</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="titlebar">
+        <h1>Bairro</h1>
+      </div>
+
+      <ion-select value="Selecione">
+        <ion-select-option value="Selecione">Selecione</ion-select-option>
+        <ion-select-option value="cat">Cat</ion-select-option>
+        <ion-select-option value="dog">Dog</ion-select-option>
+      </ion-select>
+    </div>
+
+  </div>-->
+
+
+
+  <div #blocks class="wrapper">
+
+    <!--
+    <ion-item-group #swipeDown>
+      <ion-item lines='none' class="category--em"></ion-item>
+      <ion-item lines='none' class="category--fund"></ion-item>
+      <ion-item lines='none' class="category--baby"></ion-item>
+    </ion-item-group>
+  -->
+
+    <div class="profile-card js-profile-card" *ngFor="let student of students">
+      <div class="profile-card__img">
+        <img src="../../../assets/images/Icons/{{student.iconUsers}}.png" alt="profile card"
+          (click)="DetalhesUser(student.codUsers)">
+      </div>
+
+      <div class="profile-card__cnt js-profile-cnt">
+        <div class="profile-card__name">{{student.nomeUsers}}</div>
+        <div class="profile-card__txt">{{student.nomeInstituicao}}</div>
+
+        <div class="text">
+          <p>{{student.descricaoPublicacao}}</p>
+        </div>
+
+       
+
+      </div>
+      <div>
+       
+        <div class="footer" >
+         <label class="like">
+            <input type="checkbox" (click)="favorite(student.codPublicacao)" />
+            <div class="hearth"></div>
+          </label>
+
+          <ion-icon name="add-circle-outline" class="testin" (click)="Detalhes(student.codPublicacaoUsuario)" ></ion-icon>
+          <ion-icon name="share-social-outline"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</ion-content>

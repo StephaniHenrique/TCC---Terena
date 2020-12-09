@@ -1,0 +1,156 @@
+
+ion-content{
+    --background: url('../../../../assets/images/bg.png') no-repeat center center / cover !important;
+}
+
+ion-segment{
+    border-radius: 25px;
+    margin: 20px;
+    width: 90%;
+    background-color: #fff;
+    justify-content: space-around;
+}
+
+ion-segment-button{
+    color: #8257E5;
+    font-weight: 600;
+}
+
+ion-button{
+    --border-radius:8px;
+    height: 48px;
+}
+
+
+img{
+    width: auto;
+    height: 145px;
+    margin-top: 200px;
+    margin-right: -205px;
+}
+
+.detail{
+    position: absolute;
+    width: 417px;
+    height: 394px;
+    right: -34%;
+    top: -15%;
+    border-radius: 50%;
+    
+    background: #8257E5;
+}
+
+
+img{
+    position: relative;
+    left: 50%;
+    padding: 20px;
+    height: auto;
+    width: 80%;
+    margin-left: -40%; 
+    margin-top: 15%;
+}
+
+form{
+    margin: 20px;
+
+    ion-item{
+        background-color: transparent;
+        width: 95%;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    
+}
+
+.sep{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 70px;
+}
+
+.sep-register{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+}
+
+hr{
+    padding: 0;
+    height: 1px;
+    width: 20%;
+    border: none;
+    color: #fff;
+    background-color: #fff;
+}
+
+p{
+ margin-top: 0;
+
+ a{
+     padding: 0;
+ }
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    .facebook{
+        --background: #2F80ED;
+        color: #fff;
+        --border-radius: 30px;
+        width: 167px;
+    }
+    
+    .google{
+        --background: #EB5757;
+        color: #fff;
+        --border-radius: 30px;
+        width: 167px;
+    }
+    
+}
+
+a{
+    color: #fff;
+    margin-left: 20px;
+    float: right;
+    margin-bottom: 30px;
+}
+
+.toSignup{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 5px;
+
+    a{
+        margin-top: 0;
+        margin-left: 5px;
+        text-decoration: underline;
+    }
+}
+
+.terms{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    ion-checkbox{
+        margin-right: 7px;
+    }
+
+    ion-label{
+        margin-top: 0;
+    }
+}
+

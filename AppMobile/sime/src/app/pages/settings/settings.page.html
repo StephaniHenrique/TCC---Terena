@@ -1,0 +1,46 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <div class="perfil" slot="start">
+      <img src="../../../assets/images/Icons/{{userJson.iconUsers}}.png" (click)="navigateToPerfil()" />
+    </div>
+    <ion-icon name="notifications-outline" slot="end" (click)="navigateToPendencies()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="pageheader">
+
+  </div>
+
+  <div class="wrapper">
+    <h2>Seus adotados</h2>
+
+    <div class="leaderboard">
+      <ion-item-sliding *ngFor="let studentAp of studentsAp">
+        <ion-item lines="none">
+
+      <div class="leaderboard__profile" >
+        <img src="../../../assets/images/Icons/{{studentAp.iconUsers}}.png" class="leaderboard__picture{{studentAp.nivelEscolaridadeCor}}">
+        <div class="info">
+          <span class="leaderboard__name">{{studentAp.nomeUsers}}</span>
+          <div class="info2">
+            <span class="tag">{{studentAp.nomeInstituicao}}</span>
+          </div>
+        </div>
+      </div>
+      </ion-item>
+          <ion-item-options side="end" color="transparent">
+            <ion-item-option color="transparent">
+              <ion-icon name="trash" (click)="remove(studentAp.codApadrinhamento)"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+    </div>
+  </div>
+
+</ion-content>

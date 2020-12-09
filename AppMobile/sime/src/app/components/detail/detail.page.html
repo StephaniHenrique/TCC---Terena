@@ -1,0 +1,76 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" (click)="voltarPag()"></ion-icon>
+    <div class="perfil" slot="end">
+     <img src="../../../assets/images/Icons/{{userJson.iconUsers}}.png" (click)="navigateToPerfil()" />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pageheader">
+  </div>
+
+  <div class="container">
+    <img src="../../../assets/images/Publicações/{{pubJson.fotoPublicacao}}.png">
+    <h1 class="title">{{pubJson.tituloPublicacao}}</h1>
+
+    <ion-slides [options]="slidesOptions">
+      <ion-slide class="teste">
+        <div class="box{{pubJson.nivelEscolaridadeCor}}"></div>
+        <p class="tag">{{pubJson.nivelEscolaridade}}</p>
+      </ion-slide>
+
+      <ion-slide class="teste">
+        <div class="boxNear"></div>
+        <p class="tag">Perto de você</p>
+      </ion-slide>
+
+      <ion-slide class="teste">
+        <div class="boxSchool"></div>
+        <p class="tag">{{pubJson.nomeInstituicao}}</p>
+      </ion-slide>
+    </ion-slides>
+
+    <p>{{pubJson.descricaoPublicacao}}</p>
+
+    <div class="{{pubJson.nivelEscolaridadeCor}}">
+      <h2>{{pubJson.nomeUsers}}</h2>
+      <img src="../../../assets/images/Icons/{{pubJson.iconUsers}}.png">
+    </div>
+
+  </div>
+  <div #blocks class="beTheHero">
+    <div class="headerDonate">
+      <img src="../../../assets/images/image3.png">
+      <h1>Ser herói</h1>
+      <ion-button class="icon" (click)="toggleBlocks()">
+        <ion-icon [name]="initialStep > 0 ? 'chevron-down-outline' : 'chevron-up-outline'">
+        </ion-icon>
+      </ion-button>
+    </div>
+
+    <div #background class="wrapperDonate">
+      <p>Insira o código de rastreamento da sua doação e seja um herói para este aluno!</p>
+
+      <p class="endereco">
+        <ion-icon name="location-outline"></ion-icon>{{pubJson.logUsers}}, {{pubJson.numUsers}}
+      </p>
+      <p class="cep">
+        <ion-icon name="compass-outline"></ion-icon>{{pubJson.cepUsers}}
+      </p>
+
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <ion-item color="transparent">
+          <ion-input type="text" required [(ngModel)]="rastrearDoacao" required formControlName="rastrearDoacao"></ion-input>
+        </ion-item>
+
+
+        <ion-button type="submit" class="ion-margin-top" expand="block" [disabled]="form.invalid">Finalizar</ion-button>
+      </form>
+    </div>
+
+
+  </div>
+
+</ion-content>

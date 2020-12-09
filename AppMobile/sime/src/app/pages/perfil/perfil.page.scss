@@ -1,0 +1,467 @@
+ion-toolbar {
+  padding-right: 0;
+  padding-left: 15px;
+  ion-icon {
+    font-size: 20px;
+  }
+}
+
+.eita{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  background-image: url(../../../assets/images/profile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 56px;
+}
+
+
+
+.container {
+  margin: 10px auto;
+  overflow: hidden;
+  width: 360px;
+}
+
+img {
+  display: block;
+}
+
+
+.btn {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  color: #32264D;
+}
+
+
+/* Profile Section */
+
+.profile {
+  padding: 25px 0;
+}
+
+.profile-image {
+  float: left;
+  width: calc(33.333% - 1rem);
+ 
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+
+.profile-stats{
+  float: left;
+  width: calc(66.666% - 2rem);
+}
+
+
+.profile-user-name {
+
+  margin-bottom: -20px;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #32264D;
+}
+
+.profile-adopt-btn {
+  font-size: 20px;
+  line-height: 1.8;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+ 
+}
+
+
+.profile-stats {
+  margin-top: 2.3rem;
+}
+
+.profile-stats li {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-right: 4rem;
+  
+}
+
+
+
+.profile-real-name,
+.profile-stat-count,
+.profile-adopt-btn {
+  font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 40rem) {
+
+
+  .profile-image,
+  .profile-stats {
+      float: none;
+      width: auto;
+  }
+
+  .profile-image img {
+      width: 7.7rem;
+  }
+
+ 
+
+  .profile-user-name {
+      font-size: 20px;
+    
+  }
+
+  .profile-adopt-btn {
+      order: 1;
+      padding: 0;
+      text-align: center;
+      margin-top: 1rem;
+  }
+
+  .profile-adopt-btn {
+      margin-left: 0;
+  }
+
+
+  .profile-stats {
+      order: 1;
+      margin-top: 1.5rem;
+  }
+
+  .profile-stats ul {
+      display: flex;
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 0.1rem solid #dadada;
+      border-bottom: 0.1rem solid #dadada;
+  }
+
+  .profile-stats li {
+      font-size: 15px;
+      flex: 1;
+      margin: 0;
+      color: #32264D;
+  }
+
+  .profile-stat-count {
+      display: block;
+     
+  }
+}
+
+@supports (display: grid) {
+  .profile {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 3rem;
+      align-items: center;
+  }
+
+  .profile-image {
+      grid-row: 1 / -1;
+  }
+
+
+  .profile-image,
+  .profile-stats {
+      width: auto;
+      margin: 0;
+  }
+
+  @media (max-width: 40rem) {
+      .profile {
+          grid-template-columns: auto 1fr;
+          grid-row-gap: 1.5rem;
+      }
+
+      .profile-image {
+          grid-row: 1 / 2;
+      }
+
+      .profile-user-settings {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-gap: 1rem;
+      }
+
+      .profile-adopt-btn {
+          grid-column: 1 / -1;
+      }
+
+      .profile-stats{
+        grid-column: 1/-1;
+      }
+   
+      .profile-adopt-btn
+      .profile-stats {
+          margin: 0;
+      }
+  }
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  font-size: 11px;
+  margin-right: 8px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+
+.body {
+  background-color: #eee;
+  color: #555;
+  margin-top: -50px;
+  padding: 0 15px 15px;
+  position: relative;
+}
+
+.bodyOK {
+  background-color: #eee;
+  color: #555;
+  margin-top: 34px;
+  padding: 0 15px 15px;
+  position: relative;
+}
+
+.body-image {
+  border-radius: 100%;
+  float: left;
+  margin: -100px 0 20px;
+  position: relative;
+  z-index: 2;
+  width: 110px;
+  height: 110px;
+}
+
+
+.margin{
+  margin-top: -10px;
+}
+
+.contacts img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin: 10px;
+  transition: 0.3s ease-in-out all;
+}
+.contacts img:hover {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.contacts img.EducaçãoInfantil {
+  border: 3px solid #e26890;
+  
+}
+.contacts img.EnsinoMédio {
+  border: 3px solid #fdc474;
+}
+.contacts img.EnsinoFundamental {
+  border: 3px solid #049DBF;
+}
+
+
+  
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.titlebar h1 {
+  font-size: 14px;
+line-height: 19px;
+color: #9C98A6;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+
+
+.titlebar span {
+  color: #c1c1c1;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.text {
+  width: 80%;
+}
+
+
+.contacts {
+  padding: 13px 0px;
+}
+.text span {
+  color: #bbbbbb;
+  font-size: 14px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+}
+
+.Card {
+  display: table;
+  position: relative;
+  margin: 25px auto 0;
+  width: 100%;
+  height: 73px;
+  background-color: #fff;
+  color: #fff;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+
+  &.is-hidden {
+    opacity: 0;
+    height: 0;
+    font-size: 0;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.Card-help {
+  display: table;
+  position: relative;
+  margin: 25px auto 0;
+  margin-bottom: 31px;
+  width: 100%;
+  height: 73px;
+  background-color: #e0e0e0;
+  color: #fff;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+
+  &.is-hidden {
+    opacity: 0;
+    height: 0;
+    font-size: 0;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.Card-date {
+  display: table-cell;
+  vertical-align: middle;
+  width: 75px;
+  padding: 12px;
+  text-align: center;
+  background-color: #8257e5;
+  height: 60px;
+  border-radius: 7px;
+
+  > i {
+    width: 20px;
+    font-size: 20px;
+  }
+}
+
+.Card-body {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1px 2px 1px 20px;
+  
+    > p {
+      line-height: 1.2;
+      margin-top: 6px;
+    
+  }
+
+  
+}
+
+
+h3 {
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+p{
+  font-size: 12px;
+line-height: 20px;
+color: #6A6180;
+}
+
+h1{
+  font-size: 22px;
+line-height: 29px;
+color: #6A6180;
+font-weight: 700;
+margin-top: 2px;
+}
+
+.hero{
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  bottom: -12px;
+  right: 22px;
+}
+
+
+
+ion-item-options{
+  margin: 25px 16px 0 ;
+  height: 73px;
+  ion-item-option{
+    ion-icon{
+      font-size: 20px;
+      color:  #8257e5;
+    }
+  }
+}
+
+
+
+

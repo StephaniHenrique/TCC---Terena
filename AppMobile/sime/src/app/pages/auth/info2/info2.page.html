@@ -1,0 +1,63 @@
+
+<ion-content class="ion-padding">
+  <div class="card">
+
+    <div class="header">
+      <ion-avatar *ngFor="let studentPush of studentsPush">
+        <img src="../../../../assets/images/Icons/{{studentPush.iconUsers}}.png">
+      </ion-avatar>
+      <ion-icon name="map-outline"></ion-icon>
+    </div>
+
+  <form [formGroup]="formGroup"  (ngSubmit)="onSubmit()" >
+
+    <div class="text">
+      <p>Agora falta pouco! <br>Nos ajude a te encontrar.</p>
+    </div>
+
+    <ion-item color="transparent">
+      <ion-label position="floating">CEP</ion-label>
+      <ion-input type="text" required  (focusout)="consultarCep($event.target.value)"  formControlName="cepUsers"></ion-input>
+      
+    </ion-item >    
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Cidade</ion-label>
+      <ion-input type="text" required   formControlName="cidadeUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent"> 
+      <ion-label position="floating" >UF</ion-label>
+      <ion-input type="text" required   formControlName="ufUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Municipio</ion-label>
+      <ion-input type="text" required   formControlName="municipioUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Bairro</ion-label>
+      <ion-input type="text" required   formControlName="bairroUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Endereço</ion-label>
+      <ion-input type="text" required   formControlName="logUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Nº</ion-label>
+      <ion-input type="text" required   formControlName="numUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Comp.</ion-label>
+      <ion-input type="text" required   formControlName="complementoUsers"></ion-input>
+    </ion-item>
+   
+    <ion-button type="submit" class="ion-margin-top" (click)="navigateToInfo3()" expand="block" >Próximo</ion-button>
+  </form>
+</div>
+</ion-content>
+

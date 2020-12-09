@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="perfil" slot="start">
+      <img src="../../../assets/images/Icons/{{userJson.iconUsers}}.png" (click)="navigateToPerfil()" />
+    </div>
+    <ion-icon name="notifications-outline" slot="end" (click)="navigateToPendencies()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div class="pageheader">
+
+  </div>
+
+  <div class="wrapper">
+    <h2>Meus casos <br /> favoritos</h2>
+  
+      <div class="profile-card js-profile-card" *ngFor="let studentFavorite of studentsFavorite">
+        <div class="profile-card__img" >
+          <img src="../../../assets/images/Icons/{{studentFavorite.iconUsers}}.png" alt="profile card" (click)="DetalhesUser(studentFavorite.codUsers)">
+        </div>
+
+        <div class="profile-card__cnt js-profile-cnt">
+          <div class="profile-card__name">{{studentFavorite.nomeUsers}}</div>
+          <div class="profile-card__txt">{{studentFavorite.nomeInstituicao}}</div>
+
+          <div class="text">
+            <p>{{studentFavorite.descricaoPublicacao}}</p>
+          </div>
+
+        </div>
+        <div>
+         
+          <div class="footer" >
+            <label class="like">
+              <input type="checkbox" checked (click)="Disfavor(studentFavorite.codPublicacao)"/>
+              <div class="hearth"></div>
+            </label>
+            
+            <ion-icon name="add-circle-outline" class="testin" (click)="Detalhes(studentFavorite.codPublicacaoUsuario)"></ion-icon>
+            <ion-icon name="share-social-outline"></ion-icon>
+          
+          </div>
+        </div>
+
+      </div>
+     </div>
+
+</ion-content>

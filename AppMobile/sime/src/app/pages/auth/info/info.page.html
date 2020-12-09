@@ -1,0 +1,57 @@
+ <ion-content class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
+<div class="card">
+  <ion-avatar *ngFor="let studentPush of studentsPush">
+    <img src="../../../../assets/images/Icons/{{studentPush.iconUsers}}.png">
+  </ion-avatar>
+  <div class="edit" (click)="addPhoto()">
+    <img src="https://img.icons8.com/windows/32/000000/edit.png">
+  </div>
+  
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="text">
+      <p>Nos ajude a saber mais sobre você! <br> Preencha suas informações.</p>
+    </div>
+    <ion-item color="transparent"> 
+      <ion-label position="floating">Nome Completo</ion-label>
+      <ion-input  type="text" required  ngModel name="nomeUsers"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating">Data de Nascimento</ion-label>
+      <ion-datetime required ngModel name="nascUsers"></ion-datetime>
+    </ion-item>
+
+    <ion-radio-group ngModel name="sexoUsers">
+      <ion-list-header>
+        <ion-label>Sexo</ion-label>
+      </ion-list-header>
+
+      <div class="sexo">
+      <ion-item color="transparent" lines="none" >
+        <ion-label>Feminino</ion-label>
+        <ion-radio slot="start" value="F"></ion-radio>
+      </ion-item>
+  
+      <ion-item color="transparent" lines="none">
+        <ion-label>Masculino</ion-label>
+        <ion-radio slot="start" value="M"></ion-radio>
+      </ion-item>
+    </div>
+  
+    </ion-radio-group>
+
+    <ion-item color="transparent">
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input type="text" required ngModel name="cpfUsers"></ion-input>
+    </ion-item>
+   
+    <ion-button type="submit" class="ion-margin-top" expand="block" (click)="navigateToInfo2()">Próximo</ion-button>
+  </form>
+</div>
+</ion-content>

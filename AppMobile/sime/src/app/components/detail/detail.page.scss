@@ -1,0 +1,268 @@
+ion-toolbar {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    ion-icon {
+        font-size: 20px;
+    }
+    .perfil {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+
+.pageheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    background-image: url(../../../assets/images/profile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 213px;
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    padding: 50px 30px;
+    position: fixed;
+    z-index: 2;
+
+    .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        color: #32264d;
+    }
+
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        color: #6a6180;
+    }
+
+    .EnsinoMédio {
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 95%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-left: 20px;
+        background-color: #fdc474;
+
+        h2 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+            margin-top: -18px;
+            margin-right: -10px;
+            border-radius: 50px;
+        }
+    }
+
+    .EnsinoFundamental{
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 95%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-left: 20px;
+        background-color: #049dbf;
+
+        h2 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+            margin-top: -18px;
+            margin-right: -10px;
+            border-radius: 50px;
+        }
+    }
+
+    .EducaçãoInfantil {
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 95%;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-left: 20px;
+        background-color: #e26890;
+
+        h2 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+            margin-top: -18px;
+            margin-right: -10px;
+            border-radius: 50px;
+        }
+    }
+}
+
+.boxEnsinoMédio {
+    width: 21px;
+    height: 21px;
+    background-color: #fdc474;
+    border-radius: 5px;
+    margin-right: 6px;
+    margin-top: -1px;
+}
+
+.boxEducaçãoInfantil {
+    width: 21px;
+    height: 21px;
+    background-color: #e26890;
+    border-radius: 5px;
+    margin-right: 6px;
+    margin-top: -1px;
+}
+
+.boxEnsinoFundamental {
+    width: 21px;
+    height: 21px;
+    background-color: #049dbf;
+    border-radius: 5px;
+    margin-right: 6px;
+    margin-top: -1px;
+}
+
+.boxSchool {
+    width: 21px;
+    height: 21px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    margin-right: 6px;
+    margin-top: -1px;
+}
+
+.boxNear {
+    width: 21px;
+    height: 21px;
+    background-color: #8257e5;
+    border-radius: 5px;
+    margin-right: 6px;
+    margin-top: -1px;
+}
+
+.beTheHero {
+    background-color: #fff;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    height: 58px;
+    transition: height 0.4s;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 10px 30px rgba(82, 74, 74, 10);
+    align-items: center;
+    display: flex;
+
+    .headerDonate {
+        padding: 2px 30px 10px 100px;
+        display: flex;
+        position: absolute;
+        top: 0;
+
+        img {
+            height: 50px;
+            margin-top: 5px;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            color: #6a6180;
+        }
+
+        ion-button {
+            --background: transparent;
+            --box-shadow: 0;
+        }
+
+        ion-icon {
+            margin-top: 20px;
+            margin-left: 0px;
+            color: #6a6180;
+        }
+    }
+
+    .wrapperDonate {
+        width: 100%;
+        padding: 60px 40px;
+        margin-bottom: -300px;
+        transition: margin-bottom 0.4s;
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: justify;
+            color: #6a6180;
+        }
+        form{
+
+            ion-item {
+                color: #a380f6;
+            }
+        }
+
+        
+    }
+
+    .endereco {
+        margin-left: auto;
+        margin-right: auto;
+
+        ion-icon {
+            margin-right: 15px;
+        }
+    }
+
+    .cep{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+
+        ion-icon {
+            margin-right: 15px;
+        }
+
+    }
+}

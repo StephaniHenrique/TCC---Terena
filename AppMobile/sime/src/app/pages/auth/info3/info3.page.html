@@ -1,0 +1,65 @@
+
+<ion-content class="ion-padding">
+  <div class="card">
+
+    <div class="header">
+      <ion-avatar *ngFor="let studentPush of studentsPush"> 
+        <img src="../../../../assets/images/Icons/{{studentPush.iconUsers}}.png">
+      </ion-avatar>
+      <ion-icon name="book-outline"></ion-icon>
+    </div>
+
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" >
+
+    <div class="text">
+      <p> Perto do fim! <br> Se não for um aluno, <a (click)="navigateToLogin()" >pule</a> esta etapa. </p>
+    </div>
+
+    <ion-item color="transparent"> 
+      <ion-label position="floating">Escolaridade</ion-label>
+      <ion-select formControlName="nivelEscolaridade" mode="ios" interface="action-sheet">
+        <ion-select-option value="Ensino Médio">Ensino médio</ion-select-option>
+        <ion-select-option value="Ensino Fundamental">Ensino fundamental</ion-select-option>
+        <ion-select-option value="Educação Infantil">Educação infantil</ion-select-option>
+      </ion-select>
+    </ion-item>  
+
+    <ion-item color="transparent"> 
+      <ion-label position="floating">Ano/Série</ion-label>
+      <ion-select formControlName="serieEscolaridade" mode="ios" interface="action-sheet">
+        <ion-select-option value="1º ano">1º ano</ion-select-option>
+        <ion-select-option value="2º ano">2º ano</ion-select-option>
+        <ion-select-option value="3º ano">3º ano</ion-select-option>
+        <ion-select-option value="4º ano">4º ano</ion-select-option>
+        <ion-select-option value="5º ano">5º ano</ion-select-option>
+        <ion-select-option value="6º ano">6º ano</ion-select-option>
+        <ion-select-option value="7º ano">7º ano</ion-select-option>
+        <ion-select-option value="8º ano">8º ano</ion-select-option>
+        <ion-select-option value="9º ano">9º ano</ion-select-option>
+      </ion-select>
+    </ion-item>  
+
+    <ion-item color="transparent">
+      <ion-label position="floating">Ano de Conclusão</ion-label>
+      <ion-datetime displayFormat="MMM YYYY" required ngModel formControlName="anofimEscolaridade"></ion-datetime>
+    </ion-item>
+
+    <ion-item color="transparent"> 
+      <ion-label position="floating" >Registro do Aluno (RA)</ion-label>
+      <ion-input type="text" required   formControlName="identificarEscolaridade"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" >Nome da Instituição</ion-label>
+      <ion-input type="text" required   formControlName="instituicaoEscolaridade"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label position="floating" mask="000.000.000-00">Código da Instituição</ion-label>
+      <ion-input type="text" required   formControlName="codInstituicaoEscolaridade"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" class="ion-margin-top" (click)="navigateToLogin()" expand="block"  >Finalizar</ion-button>
+  </form>
+</div>
+</ion-content>
