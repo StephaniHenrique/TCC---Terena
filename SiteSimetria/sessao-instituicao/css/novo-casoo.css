@@ -1,0 +1,205 @@
+:root{
+    --color-background: #F8F8F8;
+    --color-dark-text: #373737;
+    --color-ligth-text: #C2C2C2;
+    --color-ligth: #FFFFFF;
+    --color-purple: #8257E5;
+    --color-dark-purple: #3C038C;
+    --color-blue: #9CBEED;
+    --color-yellow: #E38540;
+    --color-pin: #F26087;
+
+  
+    /* variaveis */
+    --header-height: 3.5rem;
+    --nav-width: 68px;
+  
+    /*fonte*/
+    --normal-font-size: 1rem;
+    --body-font: montserrat;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* margens*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*
+  @media screen and (min-width: 320px){
+  
+  }
+  
+  @media screen and (min-width: 576px){
+  }
+  
+  /* tablet/
+  @media screen and (min-width: 768px){
+  }
+  
+  
+  /*desktop/
+  @media screen and (min-width: 960px){
+  }
+  */
+  
+  
+  /* fontes */
+  @font-face {
+    font-family: montserrat;
+    src: url('../css/fonts/Montserrat-Regular.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBold;
+  src: url('../css/fonts/Montserrat-Bold.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratThin;
+  src: url('../css/fonts/Montserrat-Thin.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBlack;
+  src: url('../css/fonts/Montserrat-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: montserratMedium;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+  }
+  
+  @font-face {
+  font-family: sun;
+  src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+  }
+
+  
+ *{
+     outline: none;
+ }
+
+  .take {
+    padding: 1rem;
+    margin-left: 30vw;
+  }
+  
+  input[type=file] {
+    outline: 0;
+    opacity: 0.01;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .foto {
+    width: 180px;
+    height: 140px;
+    border: var(--color-ligth-text) dashed 2px;
+    border-radius: 5px;
+    display: block;
+    padding: 30px;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    font-family: montserrat;
+  }
+  
+  .foto i {
+    display: block;
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+  .foto i,
+  .foto .ttitle {
+    color:var(--color-ligth-text);
+    transition: 200ms color;
+  }
+  .foto:hover {
+    border: var(--color-purple) solid 2px;
+  }
+  .foto:hover i,
+  .foto:hover .title {
+    color: var(--color-purple);
+  }
+
+
+
+  .l-main form .box{
+    position:relative;
+    margin-top: 3rem;
+  }
+  
+
+  .l-main form .box input{
+    padding:8px;
+    border-bottom: solid 1px #000000;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: var(--color-background);
+    width: 100%;
+  }
+  
+  .l-main form .box label{
+    position: absolute;
+    top:50%;
+    left: 8px;
+    transform: translateY(-50%);
+    transition: top .2s;
+    background-color: var(--color-background);
+  }
+  
+ .l-main form .box input:not(:placeholder-shown) + label {
+    top:0;
+  }
+  
+  .l-main form .btn-postar{ 
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+    background-color: #9668FF;
+    padding: .8rem;
+    color: var(--color-ligth);
+    font-size: var(--h2-font-size);
+    font-family: montserratBold;
+    border-radius: 10px;
+  }
+  
+  .l-main form .btn-postar:hover{ 
+    background-color: var(--color-purple);
+  }
+
+  .l-main form .box .desc{
+    border: solid 1px #000000;
+    padding: 1rem;
+  }
+
+ .l-main form .descricao{
+    margin-top: 2rem;
+ } 
+
+
+ .l-main .container{
+    margin-top: 2rem;
+    height: 220px;
+    width: 290px;
+ }
+
+
+  

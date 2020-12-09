@@ -1,0 +1,160 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-blue: #45A7D1;
+    --color-pink: #F26087;
+    --color-white: #f8f8f8;
+    --color-dark-purple: #3C048D;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('../css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: sun;
+    src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-purple);
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 90%;
+    max-width: 980px;
+    text-align: center;
+    margin: auto;
+    flex-direction: column
+
+}
+
+/* ====================== TÍTULO E SUBTITULOS ====================== */
+.container .title{
+    font-family: montserratBlack;
+    color: var(--color-white);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container .text-log{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .text-log .subtitle{
+    font-family: montserrat;
+    color: var(--color-white);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.container .text-log .log{
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* ====================== CONFIGURAÇÕES DAS OPÇÕES ====================== */
+.container .escolha{
+    display: flex;
+    margin-top: 13vh;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.container .escolha .aluno{
+    text-align: center;
+    width: 15vw;
+    margin-left: 20%;
+    float: left;
+    position: relative;
+}
+
+.container .escolha  .instituicao{
+    text-align: center;
+    width: 13vw;
+    margin-right: 20%;
+    float: left;
+    position: relative;
+}
+
+.container .escolha img{
+    width: 15vw;
+}
+
+.container .escolha .aluno .textDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10vh;
+    padding-left: 2.6vw;
+
+ }
+.container .escolha .aluno a{
+    font-family: montserratThin;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+
+}
+
+.container .escolha .instituicao .textDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10vh;
+    padding-left: 2.6vw;
+
+
+ }
+.container .escolha .instituicao a{
+    font-family: montserratThin;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+
+}
+/* ====================== ELEMENTO DE TEXTO NO BOTTOM DA TELA ====================== */
+.bottom{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 10vh;
+}
+

@@ -1,0 +1,299 @@
+:root{
+    --color-background: #F8F8F8;
+    --color-dark-text: #373737;
+    --color-ligth-text: #C2C2C2;
+    --color-ligth: #FFFFFF;
+    --color-purple: #8257E5;
+    --color-dark-purple: #3C038C;
+    --color-blue: #9CBEED;
+    --color-yellow: #E38540;
+    --color-pin: #F26087;
+  
+    /* variaveis */
+    --header-height: 3.5rem;
+    --nav-width: 68px;
+  
+    /*fonte*/
+    --normal-font-size: 1rem;
+    --body-font: montserrat;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* margens*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  
+  /* fontes */
+  @font-face {
+    font-family: montserrat;
+    src: url('../css/fonts/Montserrat-Regular.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBold;
+  src: url('../css/fonts/Montserrat-Bold.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratThin;
+  src: url('../css/fonts/Montserrat-Thin.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBlack;
+  src: url('../css/fonts/Montserrat-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: montserratMedium;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+  }
+  
+  @font-face {
+  font-family: sun;
+  src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+  }
+  
+   /* ------------ title ------------ */
+   main .mainText .mainTitle{
+    color: var(--color-dark-purple);
+    display: flex;
+    font-family: montserratBold;
+    align-items: center;
+  }
+
+  main .mainText .mainTitle i{
+    font-size: var(--h2-font-size);
+  }
+
+  main .mainText .mainTitle h2{
+    font-size: var(--normal-font-size);
+  }
+  
+  main .mainText p{
+    color: var(--color-dark-text);
+    top: 0;
+    margin-top: -.5rem;
+  }
+
+  .modal{
+    background: #F5F5FA;
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px rgba(170, 170, 204, 0.5), inset -10px -10px 20px #FFFFFF;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+
+main .modal .closeModal{
+    display: block;
+    text-align: right;
+}
+main .modal .closeModal .btn-close{
+    outline: none;
+    color: var(--color-purple);
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    font-size: var(--biggest-font-size);
+    cursor: pointer;
+}
+
+main .modal .titleModal{
+    display: block;
+    text-align: center;
+}
+
+main .modal .titleModal i{
+    color: var(--color-purple);
+    font-size: 3rem ;
+}
+main .modal .titleModal .title{
+    color: var(--color-purple);
+    font-size: var(--h2-font-size);
+    font-family: montserratBold;
+}
+
+main .modal .dadosModal{
+    margin: 1rem;
+    line-height: 25px;
+}
+
+main .modal .motivoModal{
+    margin: 1rem;
+    line-height: 25px;
+}
+
+main .modal .motivoModal h3{
+    color: var(--color-purple);
+    font-family: montserratBold;
+}
+
+main .modal .motivoModal p{
+    line-height: 25px;
+    margin-top: -1rem;
+}
+
+main .modal .btn-modal{
+    margin: 1rem;
+}
+
+.btn-anular{
+    background: #C0C0C0;
+    border-radius: 12.446px;
+    padding: 1rem;
+    color: #6D6D6D;
+    font-family: montserratBold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.btn-excluir{
+    background: #6204BF;
+    box-shadow: inset -5px -5px 10px rgba(25, 4, 79, 0.57), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px #6140B4;
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--color-ligth);
+    font-family: montserratBold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/*mobile*/
+  @media screen and (min-width: 320px){
+      main .pendencias{
+        width: 100%;
+        margin: 3vh 2vw 3vh 0vw;
+      }
+      main .pendencias .pendContainer{
+        background: #F5F5FA;
+        box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px rgba(170, 170, 204, 0.5), inset -10px -10px 20px #FFFFFF;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 3vh;
+      }
+
+      main .pendencias .pendContainer .pendTitle{
+          display: flex;
+          align-items: center;
+          color: var(--color-purple);
+          font-size: var(--normal-font-size);
+
+      }
+
+    
+      main .pendencias .pendContainer .pendTitle h4{
+        margin-left: 1vw;
+        font-family: montserratBold;
+        
+        }
+
+        main .pendencias .pendContainer p{
+            font-size: var(--normal-font-size);
+            margin-top: -2vh;
+            margin-right: 4vw;
+            text-align: right;
+        }
+
+        main .pendencias .pendContainer button{
+          background: #8257E5;
+          box-shadow: inset -5px -5px 10px rgba(216, 201, 255, 0.57), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px #6140B4;
+          border: 0;
+          padding: 1rem;
+          color: var(--color-background);
+          font-family: montserratBold;
+          border-radius: 10px;
+          outline: none;
+        }
+
+        .modal{
+          position: absolute;
+          top: 0;
+          left: 1rem;
+          margin-bottom: 1rem;
+        }
+
+    }
+@media screen and (min-width: 576px){
+    
+    main .pendencias .pendContainer{
+      background: #F5F5FA;
+      box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px rgba(170, 170, 204, 0.5), inset -10px -10px 20px #FFFFFF;
+      border-radius: 10px;
+  
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .modal{
+      position: absolute;
+      right: 1rem;
+    }
+    
+
+  
+}
+
+/* tablet*/
+@media screen and (min-width: 768px){
+    
+    main .pendencias .pendContainer{
+      background: #F5F5FA;
+      box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px rgba(170, 170, 204, 0.5), inset -10px -10px 20px #FFFFFF;
+      border-radius: 10px;
+    }
+    main .modal{
+       left: 15%;
+       right: 10%;
+       margin-bottom: 1rem;
+    }
+}
+
+
+/*desktop*/
+@media screen and (min-width: 960px){
+
+    main .modal{
+        width: 70%;
+
+    }
+    
+    main .pendencias .pendContainer{
+      background: #F5F5FA;
+      box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px rgba(170, 170, 204, 0.5), inset -10px -10px 20px #FFFFFF;
+      border-radius: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: .5rem 1rem;
+    }
+
+  main .pendencias .pendContainer p{
+      margin-top: 0;
+
+  }
+}
+
+
+

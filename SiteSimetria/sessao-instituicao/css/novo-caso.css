@@ -1,0 +1,263 @@
+:root{
+    --color-background: #F8F8F8;
+    --color-dark-text: #373737;
+    --color-ligth-text: #C2C2C2;
+    --color-ligth: #FFFFFF;
+    --color-purple: #8257E5;
+    --color-dark-purple: #3C038C;
+    --color-blue: #9CBEED;
+    --color-yellow: #E38540;
+    --color-pin: #F26087;
+  
+    /* variaveis */
+    --header-height: 3.5rem;
+    --nav-width: 68px;
+  
+    /*fonte*/
+    --normal-font-size: 1rem;
+    --body-font: montserrat;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* margens*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+
+  
+  /* fontes */
+  @font-face {
+    font-family: montserrat;
+    src: url('../css/fonts/Montserrat-Regular.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBold;
+  src: url('../css/fonts/Montserrat-Bold.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratThin;
+  src: url('../css/fonts/Montserrat-Thin.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBlack;
+  src: url('../css/fonts/Montserrat-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: montserratMedium;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+  }
+  
+  @font-face {
+  font-family: sun;
+  src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+  }
+  
+  /* ------------ base ------------ */
+  *,::before,::after{
+    box-sizing: border-box;
+  }
+  
+  body{
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: montserrat;
+    font-size:  var(--normal-font-size);
+    transition:  .5s;
+    background-color: var(--color-background);
+  }
+  
+
+
+  a{
+    text-decoration: none;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+*{
+    outline:none;
+  }
+  
+  
+  .l-main form .box{
+    position:relative;
+    margin-top: 3rem;
+  }
+  
+
+  .l-main form .box input{
+    padding:8px;
+    border-bottom: solid 1px #000000;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: var(--color-background);
+    width: 100%;
+  }
+  
+  .l-main form .box label{
+    position: absolute;
+    top:50%;
+    left: 8px;
+    transform: translateY(-50%);
+    transition: top .2s;
+    background-color: var(--color-background);
+  }
+  
+ .l-main form .box input:not(:placeholder-shown) + label {
+    top:0;
+  }
+  
+  .l-main form .btn-postar{ 
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+    background-color: #9668FF;
+    padding: .8rem;
+    color: var(--color-ligth);
+    font-size: var(--h2-font-size);
+    font-family: montserratBold;
+    border-radius: 10px;
+  }
+  
+  .l-main form .btn-postar:hover{ 
+    background-color: var(--color-purple);
+  }
+
+  .l-main form .box .desc{
+    border: solid 1px #000000;
+    padding: 1rem;
+  }
+
+ .l-main form .descricao{
+    margin-top: 2rem;
+ } 
+
+ html, body{
+     place-items: center;
+     text-align: center;
+     padding-top: .2rem;
+ }
+
+ .l-main .container{
+    margin-top: 2rem;
+    height: 220px;
+    width: 290px;
+ }
+
+ .l-main .container .foto{
+     position: relative;
+     height: 210px;
+     width: 100%;
+     border-radius: 10px;
+     border: 2px dashed var(--color-ligth-text);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+ }
+ 
+ .l-main .container .foto .image{
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .l-main .container .foto .image img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+ }
+
+ .l-main .container .foto .icon{
+    font-size: 5rem;
+    color: var(--color-ligth-text);
+ }
+
+ .l-main .container .foto .text{
+    font-size: 1rem;
+    color: var(--color-ligth-text);
+    font-family: montserratBold;
+ }
+
+ .l-main .container .foto #btn-cancel{
+     position: absolute;
+     right: 15px;
+     top: 15px;
+     font-size: 1.4rem;
+     cursor: pointer;
+     color: var(--color-purple);
+     display: none;
+ }
+
+ .l-main .container .foto .file__name{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color-purple);
+    width: 100%;
+    color: var(--color-ligth);
+    padding: .2rem 0;
+    font-size: 1rem;
+}
+
+.l-main .container #btn-custom{
+    margin-top: .5rem;
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    background-color:  #9668FF;
+    color: var(--color-ligth);
+    font-size: 1rem;
+    font-family: montserrat;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+  
+  @media screen and (min-width: 768px){
+    .l-main .container{
+      margin-top: 10rem;
+      height: 220px;
+      width: 290px;
+   }
+    
+  }
+  
+  
+  /*desktop*/
+  @media screen and (min-width: 960px){
+  }
+  
+
+  

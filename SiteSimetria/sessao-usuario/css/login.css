@@ -1,0 +1,297 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('../css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../css/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: sun;
+    src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:var(--color-purple);
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 60vw;
+    max-width: 980px;
+    text-align: center;
+    margin: auto;
+    flex-direction: column
+
+}
+
+/* ====================== TÍTULO E SUBTITULOS ====================== */
+main .text-log{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 16vw;
+}
+
+main .text-log .title{
+    font-family: montserratBold;
+    font-size: 1.6rem;
+    color: var(--color-white);
+}
+
+main .text-log .subtitle{
+    font-family: montserratBlack;
+    font-size: 1.6rem;
+    color: var(--color-dark-purple);
+    text-decoration: none;
+    margin-left: 1vw;
+}
+
+main form .form-group{
+    display: flex;
+    margin-top: 2vh;
+    margin-bottom: 7vh;
+}
+
+main form .form-group .text{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-bottom: var(--color-ligth) 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-ligth);
+    outline: none;
+    width: 800px;
+    margin-left: 1vw;
+    padding-top: 2vh;
+}
+
+main form .form-group .text-two{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-bottom: var(--color-ligth) 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-ligth);
+    outline: none;
+    width: 775px;
+    margin-left: 1vw;
+    padding-top: 2vh;
+    
+    
+}
+
+main form .form-group .text::placeholder{
+    color: var(--color-white);
+   
+}
+main form .form-group .text-two::placeholder{
+    color: var(--color-white);
+   
+}
+
+main form .form-group #check {
+    visibility: hidden;
+    cursor: pointer;
+    margin-left: -2vw;
+    margin-top: 3vh;
+  }
+  
+  input#check::after {
+    visibility: visible;
+    content: "";
+    background:url('../img/eva_eye-off-2-fill.png') no-repeat scroll 0 0 ;
+    padding: 8px;
+  }
+  
+  input#check:checked::after {
+    content: "  ";
+    background:url('../img/feather_eye.png') no-repeat;
+    width: 10px;
+  }
+
+main form .actions{
+    display: flex;
+    margin-top: 5vh;
+    font-family: montserrat;
+    color: var(--color-white);
+    height: 5vh;
+}
+
+main form .actions input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+main form .actions input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background-color: var(--color-purple);
+    border: var(--color-white) solid 1px;
+}
+
+main form .actions input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background-color:var(--color-dark-purple);
+    border: var(--color-dark-purple) solid 1px;
+    
+}
+main form .actions input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    padding-top: 1px;
+}
+
+main form .actions label{
+    margin-left: 1vw;
+    
+}
+
+main form .actions .senha p{
+    margin-left: 45vw;
+}
+
+main form .entrar{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+    font-family: montserratBold;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    border: 0;
+    margin-top: 2vh;
+}
+
+main form .entrar:hover{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-dark-purple-hover);
+    color: var(--color-white);
+    font-family: montserratBold;
+    padding: 15px;
+    text-transform: uppercase;
+    border: 0;
+}
+
+main form .social-login{
+    margin-top: 5vh;
+    display: flex;
+}
+
+main form .social-login .facebook{
+    margin-left: 18vw;
+    background-color: #3C5A99;
+    display: flex;
+    font-family: montserratBold;
+    color: var(--color-white);
+    width: 140px;
+}
+
+main form .social-login .facebook p{
+    margin-top: 1.5vh;
+}
+
+main form .social-login .google{
+    margin-left: 4vw;
+    background-color: var(--color-white);
+    display: flex;
+    font-family: montserratBold;
+    color: var(--color-dark);
+    width: 140px;
+}
+
+main form .social-login .google img{
+    height: 26px;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+main form .social-login .google p{
+    margin-top: 1.5vh;
+}
+
+/* ====================== ELEMENTO DE TEXTO NO BOTTOM DA TELA ====================== */
+ .bottom{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 3vh;
+}
+

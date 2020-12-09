@@ -1,0 +1,410 @@
+* {
+  outline: 0;
+}
+:root {
+  --color-purple: #8257e5;
+  --color-yellow: #f2c188;
+  --color-yellow-ligth: #f2aa52;
+  --color-blue: #45a7d1;
+  --color-dark-blue: #049dbf;
+  --color-pink: #f26087;
+  --color-dark-pink: #f20587;
+  --color-white: #f8f8f8;
+  --color-ligth: #ffffff;
+  --color-dark: #171d24;
+  --color-title: #3f4b5a;
+  --color-dark-ligth: #3f4b5a;
+  --color-dark-purple: #3c048d;
+  --color-dark-purple-hover: #2d0469;
+  --color-alert: #dc002e;
+  --color-detail: #c4c4c4;
+  /* a cada 1rem será considerado 10px */
+  font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+  font-family: montserrat;
+  src: url('../css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: montserratBold;
+  src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+  font-family: montserratThin;
+  src: url('../css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+  font-family: montserratMed;
+  src: url('../css/fonts/Montserrat-Medium.ttf');
+}
+@font-face {
+  font-family: sun;
+  src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--color-white);
+  background-image: url('../img/fundo.png');
+  align-items: center;
+  justify-items: stretch;
+}
+
+/* ====================== topo e titulo ====================== */
+main .topo {
+  width: 100%;
+  height: 150px;
+  color: var(--color-white);
+  display: flex;
+  background-image: url('../img/top.png');
+}
+
+main .topo a {
+  margin-left: 2%;
+  margin-top: 4%;
+  align-items: center;
+}
+
+main .topo p {
+  font-family: montserratBold;
+  font-size: calc(1em + 1vw);
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 3%;
+}
+
+/* ====================== formulário ====================== */
+
+.content {
+  width: 60vw;
+  height: auto;
+  background-color: var(--color-ligth);
+  box-shadow: 2px 6px 10px #171d2438;
+  margin: 0 auto 20px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 60px 80px;
+  box-sizing: border-box;
+}
+
+.content .multiStep {
+  width: 100%;
+  display: flex;
+  padding: 20px 10px;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+}
+
+.content .multiStep .progress {
+  background-color: rgba(128, 128, 128, 0.404);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.content .multiStep .progress .progressFunc {
+  width: 1px;
+  height: 3px;
+  background-color: var(--color-purple);
+  animation: mymove 1.5s forwards;
+  display: none;
+  position: relative;
+}
+
+@keyframes mymove {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+.progressFunc2 {
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-purple);
+  animation: mymove2 1.5s forwards;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes mymove2 {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progressFunc3 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-purple);
+  animation: mymove3 1.5s forwards;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes mymove3 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+.progressFunc4 {
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-purple);
+  animation: mymove4 1.5s forwards;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes mymove4 {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 1px;
+  }
+}
+
+.content .multiStep .steps {
+  width: 100%;
+  height: 1;
+  position: relative;
+}
+
+.content .multiStep .steps .stepss {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .multiStep .steps .stepss div {
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+.content .multiStep .steps .stepss div p {
+  font-size: 18px;
+  color: white;
+  font-weight: 800;
+}
+
+.content form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 5px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.content form h3 {
+  color: #222222d7;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 20px 10px;
+}
+
+.content .twoFields {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.content .twoFields .wrapper {
+  width: 50%;
+}
+
+.wrapper {
+  position: relative;
+  height: 7vh;
+  padding: 0;
+  margin: 25px 10px;
+}
+
+.wrapper input {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #2222223a;
+  border-radius: 5px;
+  padding: 11px;
+  background-color: var(--color-ligth);
+  box-sizing: border-box;
+}
+
+.wrapper select {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #2222223a;
+  border-radius: 5px;
+  padding: 11px;
+  background-color: var(--color-ligth);
+  box-sizing: border-box;
+  color: #22222294;
+}
+
+.wrapper option {
+  color: #22222294;
+}
+
+.wrapper label {
+  position: absolute;
+  top: 50%;
+  padding: 0 3px;
+  left: 8px;
+  font-size: 14px;
+  color: #22222294;
+  transform: translateY(-50%);
+  background-color: var(--color-ligth);
+  transition: top 0.2s;
+}
+
+div input:not(:placeholder-shown) + label {
+  top: -1px;
+}
+
+.inputInvalido {
+  border: solid 1px #ff0000c2 !important;
+  color: #ff0000c2;
+}
+
+.labelInvalida {
+  color: #ff0000c2 !important;
+}
+
+.msgzinha {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  bottom: -25px;
+  display: none;
+  color: #ff0000c2;
+}
+
+.msgzinha p i {
+  margin-right: 10px;
+}
+
+.ativo {
+  display: block !important;
+}
+
+.inativo {
+  display: none !important;
+}
+
+.content form .btnCad {
+  margin: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content form .btn {
+  height: 5vh;
+  width: 190px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: var(--color-purple);
+  color: white;
+  cursor: pointer;
+}
+
+#formEscolaridade {
+  display: none;
+}
+
+#formInfoPessoais {
+  display: none;
+}
+
+/* ----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .content .twoFields .wrapper {
+    width: 100%;
+  }
+
+  .content .twoFields {
+    flex-wrap: wrap;
+  }
+
+  .content form .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+
+.flexIconCad{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.iconCad{
+  height: 61.73px;
+  width: 61.73px;
+  background-color: rgba(0, 0, 0, 0.233);
+  border-radius: 50%;
+}
+
+.iconCad img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.flexIconCad p{
+  color: #222222d7;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 0 20px;
+}
+
+.activeEdit{
+  display: block;
+}
+
+

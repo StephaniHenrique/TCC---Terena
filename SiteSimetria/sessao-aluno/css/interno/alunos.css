@@ -1,0 +1,192 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('/css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('/css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('/css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('/css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+@font-face {
+    font-family: montserratSemiBold;
+    src: url('/css/fonts/Montserrat-SemiBold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    align-items: center;
+    justify-items: stretch;
+}
+
+
+
+main{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+}
+
+main .topo{
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+main .topo .head{
+    width: 70vw;
+}
+
+main .topo .head .title{
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    font-size: 1.8rem;
+}
+
+main .topo .head .subtitle{
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 1vh;
+}
+
+main .topo select{
+    -moz-appearance: none;
+    border: var(--color-dark-purple) 1px solid;
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark-purple);
+    /* esse pading influência no texto exibido dentro do select*/
+    padding:5px;
+    outline: none;
+    background-color: transparent;
+}
+
+main .solicitacao{
+    display: flex;
+    width: 80vw;
+    background-color: var(--color-dark-purple);
+    border-radius: 10px;
+    margin-bottom: 10vh;
+    height: 10vh;
+    padding-top: 1vh;
+}
+
+main .solicitacao img{
+    margin-left: 2vw;
+    height: 48px;
+}
+
+main .solicitacao .infos{
+    margin-left: 2vw;
+    padding-top: 1vh;
+    width: 60vw;
+}
+
+main .solicitacao .infos .title{
+    font-family: montserratSemiBold;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+main .solicitacao .infos .subtitle{
+    font-family: montserrat;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+main .solicitacao .alert{
+    width: 2vw;
+    margin-left: 10vw;
+    margin-top: 2vh;
+}
+
+main .solicitacao .alert .circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--color-alert);
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: 13vw 13vw 13vw 13vw 13vw 13vw; 
+    margin-bottom: 5vh;
+}
+
+main .container .perfil{
+    background-color: var(--color-ligth);
+    width: 10vw;
+    height: 25vh;
+    padding: 3vh 2vw 0vh 2vw;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 2vw;
+}
+
+main .container .perfil:hover{
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+main .container .perfil img{
+    width: 6vw;
+}
+
+main .container .perfil p{
+    font-family: montserrat;
+    color: var(--color-dark);
+    text-align: center;
+    margin-top: 1vh;
+    font-weight: bold;
+}

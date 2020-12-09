@@ -1,0 +1,683 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     
+    /* font size*/
+    --text-grande: 2.25rem;
+    --text-h1: 1.5rem;
+    --text-h2: 1.25rem;
+    --text-h3: 1rem;
+    --text-normal: .930rem;
+    --text-pequena: .800rem;
+    --text-pequenina: .75rem;
+
+    /* index */
+    --fixed: 100;
+    --tool: 10;
+
+    --header: 3rem;
+
+    /*margin*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('./fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('./fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('./fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: sun;
+    src: url('./fonts/Sunrise\ International\ Demo.otf');
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        /* font size*/
+    --text-grande: 4rem;
+    --text-h1: 2.25rem;
+    --text-h2: 1.5rem;
+    --text-h3: 1.25rem;
+    --text-normal: 1rem;
+    --text-pequena: .875rem;
+    --text-pequenina: .813rem;
+
+    /* index */
+    --fixed: 100;
+    --tool: 10;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .home__container{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    .home__container .home__img{
+        padding-top: 5rem;
+    }
+
+    .home__container .home__subtitle{
+        font-size: var(--text-pequenina);
+    }
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about__dados{
+    display: grid;
+    grid-template-columns: 40vw 50vw;
+    grid-template-rows: 80vh;
+    }
+
+    .app__container{
+        display: grid;
+        grid-template-columns: 35vw 50vw;
+        grid-template-rows: 70vh;
+        }
+
+    .app__container .app__img{
+        top: 0;
+        }
+        
+    .app__container .app__data .app__btn{
+        font-size: var(--text-pequenina);
+    }
+
+    .app__btn .bx{
+        font-size: var(--text-pequenina);
+    }
+    .relatos .sub-grid{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+
+    .section{
+        padding-top: 8rem;
+    }
+
+    .s-header{
+        height: calc(var(--header) + .5rem);
+    }
+
+    .nav{
+        padding-top: 1rem;
+    }
+
+    .nav__logo{
+        margin-left: var(--mb-3);
+    }
+    .nav__list{
+        display: flex;
+    }
+
+    .nav__item{
+        margin-left: var(--mb-2);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle{
+        display: none;
+    }
+
+    .inicio{
+        height: 100vh;
+        padding-top: 15vh;
+    }
+
+    .inicio .home__container .home__img{
+        width: 500PX;
+    }
+
+    .app{
+        height: 100vh;
+    }
+
+    .app__btn{
+        font-size: var(--text-pequenina);
+    }
+
+    .app .bx{
+        font-size: var(--text-h1);
+    }
+
+    .app__description{
+        line-height: 50px;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 960px){
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (min-width: 1124px){
+    
+    .nav__menu{
+        padding-left: 45vw;
+    }
+    .nav__logo{
+        display: flex;
+    }
+
+    .home__container{
+        grid-template-columns:40vw 50vw;
+        
+        
+    }
+
+    .home__data{
+        padding-left: 5vw;
+    }
+
+    .home__container .home__subtitle{
+        font-size: var(--text-h2);
+    }
+
+    .app__data{
+        padding-left: 5vw;
+        padding-top: 12vh;
+    }
+
+    .app__container{
+        display: grid;
+        grid-template-columns: 50vw 40vw;
+        grid-template-rows: 70vh;
+        }
+
+    .app__description{
+        padding-top: 5vh;
+        max-width: 30vw;
+    }
+
+    .app__stores{
+        display: flex;
+        gap: 5vh;
+        padding-top: 5vh;
+    }
+
+
+    .about__dados{
+        display: grid;
+        grid-template-columns: 50vw 40vw;
+        grid-template-rows:100vh;
+        }
+    
+    .about__infos{
+        padding-top: 20vh;
+        padding-left: 10vw;
+    }
+
+    .sub-grid{
+        display: grid;
+        grid-template-columns: 25vw 25vw 25vw;
+        gap: 5vw;
+        margin-left: -4vw;
+    }
+
+    .nav__item{
+        margin-left: var(--mb-4);
+        margin-bottom: 0;
+    }
+
+    .relato{
+        padding: 2rem;
+    }
+}
+
+
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header) 0 0 0;
+    font-family: montserrat;
+    font-size: var(--text-normal);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+h1,h2,h3,p,ul{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.section-title, .section-subtitle{
+    text-align: center;
+}
+
+.section-title{
+    font-size: var(--text-h1);
+    color: var(--color-dark);
+    margin-bottom: var(--mb-3);
+}
+
+.section-subtitle{
+    display: block;
+    color: var(--color-dark);
+    font-weight: 1rem;
+    margin-bottom: var(--mb-1);
+}
+
+.bd-container{
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.s-header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: var(--fixed);
+    background-color: var(--color-purple);
+    color: var(--color-ligth);
+}
+
+.s-header .nav{
+    max-width: 1024px;
+    height: var(--header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+@media screen and (max-width: 768px){
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--color-purple);
+        transform: .4s;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 0 0 1rem 1rem;
+        z-index: var(--fixed);
+
+    }
+}
+
+.s-header .nav__menu .nav__list .nav__item{
+    margin-bottom: var(--mb-2);
+}
+
+.nav__link , 
+.nav__logo , 
+.nav__toggle{
+    color: var(--color-ligth);
+    
+}
+
+.nav .nav__logo{
+    font-family: sun;
+    font-size: var(--text-h2);
+    align-items: center;
+}
+
+.nav .nav__logo img{
+    height: calc( var(--header) - 1rem);
+}
+
+
+.nav .nav__menu .nav__link .nav__item .nav__link{
+    transition: .3s;
+}
+
+.nav__link :hover{
+    border: var(--color-yellow-ligth) solid 3px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+.btn{
+    color: var(--color-ligth);
+}
+.btn-entrar{
+    padding: .5rem 2.1rem;
+    background-color: var(--color-pink);
+    font-family: montserratBold;
+    
+}
+
+.btn-cadastrar{
+    padding: .5rem 1.3rem;
+    background-color: var(--color-blue);
+    font-family: montserratBold;
+}
+
+.btn-entrar:hover{
+    background-color: #F94F7C;
+}
+
+.btn-cadastrar{
+    background-color: #1E9FD7;
+}
+
+.s-header .nav .nav__toggle{
+    font-size: var(--text-h2);
+    cursor: pointer;
+}
+
+.show-menu{
+    top: var(--header);
+}
+
+.s-main .inicio{
+    background-color: var(--color-purple);
+    padding-bottom: 3rem;
+}
+.s-main .home__container{
+    height: cacl(100vh - var(--header));
+    align-content: center;
+    padding: 1rem;
+}
+
+.home__title{
+    font-size: var(--text-grande);
+    color: var(--color-dark-purple);
+    margin-bottom: var(--mb-1);
+    font-family: montserratBlack;
+    font-weight: bold;
+}
+
+.home__subtitle{
+    font-size: var(--text-h1);
+    color: var(--color-ligth);
+    margin-bottom: var(--mb-4);
+}
+
+.home__img{
+    width: 300px;
+    justify-self: center;
+}
+
+.home__btn{
+    display: inline-block;
+    background-color: var(--color-dark-purple);
+    color: var(--color-ligth);
+    padding: .5rem;
+    border-radius: .3s;
+    font-family: montserratBold;
+}
+
+.home__btn:hover{
+    background-color: var(--color-dark-purple-hover);
+    
+}
+
+.about__container .about__data .about__title{
+    font-size: var(--text-h1);
+    color: var(--color-dark);
+    text-align: center;
+    font-family: montserratBold;
+}
+
+
+.s-main .app{
+    background-color: var(--color-purple);
+    color: var(--color-ligth);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.app .app__description{
+    font-family: montserratBold;
+    font-size: var(--text-h1);
+}
+
+.app .app__stores .app__btn{
+    background-color: var(--color-dark);
+    border-radius: 10px;
+    padding: .5rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    max-width: 200px;
+    max-height: 70px;
+}
+
+.app .app__stores .app__btn i{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-height: 20px;
+}
+
+.app .app__img{
+    display: cover;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.sobre .about__container .about__dados img{
+    display: cover;
+}
+
+.sobre .about__container .about__dados .about__infos .one{
+    border: var(--color-dark-pink) solid 2px;
+    border-radius: 10px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.sobre .about__container .about__dados .about__infos .one .infos{
+    background-color: var(--color-ligth);
+    border-radius: 10px;
+    padding: .5rem;
+    margin-bottom: -1rem;
+}
+
+
+.sobre .about__container .about__dados .about__infos .two{
+    border: var(--color-dark-blue) solid 2px;
+    border-radius: 10px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.sobre .about__container .about__dados .about__infos .two .infos{
+    background-color: var(--color-ligth);
+    border-radius: 10px;
+    padding: .5rem;
+    margin-bottom: -1rem;
+}
+
+
+.sobre .about__container .about__dados .about__infos .three{
+    border: var(--color-yellow-ligth) solid 2px;
+    border-radius: 10px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+.sobre .about__container .about__dados .about__infos .three .infos{
+    background-color: var(--color-ligth);
+    border-radius: 10px;
+    padding: .5rem;
+    margin-bottom: -1rem;
+}
+
+
+.relatos{
+    background-image: url('../img/fundoi.png') ;
+    padding: 1rem;
+    color: var(--color-ligth);
+    align-items: center;
+}
+
+.relatos .relatos-title{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.relatos .sub-grid{
+    margin-top: 2rem;
+}
+.relatos .sub-grid .sub__relato .relato{
+    background: var(--color-ligth);
+    border-radius: 15px;
+    position: relative;
+    color: var(--color-dark);
+    padding: 1rem;
+}
+
+.relatos .sub-grid .sub__relato .one{
+    border-top: var(--color-dark-pink) solid 6px;
+}
+
+.relatos .sub-grid .sub__relato .two{
+    border-top: var(--color-yellow-ligth) solid 6px;
+}
+
+.relatos .sub-grid .sub__relato .three{
+    border-top: var(--color-dark-blue) solid 6px;
+}
+
+.relatos .sub-grid .sub__relato .relato::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--color-ligth);
+    bottom: -20px;
+    left: 20%;
+
+}
+
+
+.relatos .sub-grid .sub__relato .sub__dados{
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.relatos .sub-grid .sub__relato .sub__dados .nome{
+    font-family: montserratBold;
+}
+
+.footer{
+    align-items: center;
+    text-align: center;
+}
+.footer .logo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer .logo img{
+    height: var(--header);
+    
+}
+
+.footer .logo p{
+    font-family: sun;
+    font-size: var(--text-grande);
+}
+
+.footer i{
+    color: var(--color-dark-purple-hover);
+}
+
+.border-item:hover{
+    border-bottom: var(--color-yellow-ligth) solid 3px;
+    margin-bottom: 3px;
+}

@@ -1,0 +1,450 @@
+/* falta arrumar hover das tags, tirar o shadow e muddar o cor do background pra um tom mais escuro*/
+/* adicionar icons das actions da publicação*/
+/*adicionar tags de nivel de escolaridade*/
+/*organizar semA^ntica do topo*/
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+    --size: 40px;
+    --frames: 62;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('../css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('../css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    align-items: center;
+    justify-items: stretch;
+}
+
+main .topo{
+    background-color: var(--color-purple);
+    height: 28vh;
+    padding: 15px 60px 15px 60px;
+    border-radius: 0px 0px 60px 60px;
+}
+/* ====================== parte de pesquisa ====================== */
+main .topo form .filtro{
+    display: flex;
+}
+main .topo form .filtro select{
+    height: 50px;
+    width: 336px;
+    left: 86px;
+    top: 118px;
+    border-radius: 0px;
+    -moz-appearance: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white);
+    border: var(--color-white) solid 1px;
+    padding: 10px;
+    font-family:  montserratLight;
+    font-size: 1.6rem;
+}
+
+main .topo form .filtro select:focus{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+
+main  .topo  form .filtro input{
+    height: 50px;
+    width: 847px;
+    left: 506px;
+    top: 118px;
+    border-radius: 0px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white);
+    border: var(--color-white) solid 1px;
+    margin-left: 2%;
+    padding: 10px;
+    font-family:  montserratLight;
+    font-size: 1.6rem;
+}
+
+main .topo form .filtro input::-webkit-input-placeholder {
+    color: var(--color-white);
+ }
+
+main .topo form .pesquisa .barra{
+    height: 50px;
+    width: 80.5%;
+    left: 506px;
+    margin-top: 20px;
+    border-radius: 0px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white);
+    border-bottom: var(--color-white) solid 1px;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    padding: 10px;
+    font-family:  montserratLight;
+    font-size: 1.6rem;
+}
+
+main .topo form .pesquisa .barra::-webkit-input-placeholder{
+    color: var(--color-white);
+ }
+
+ main .topo form .pesquisa .pesquisar{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 180px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 2%;
+    background-color: var(--color-dark-purple);
+    font-family: montserratBold;
+    color: var(--color-white);
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+ }
+
+ main .topo form .pesquisa .pesquisar:hover{
+     background-color: var(--color-dark-purple-hover);
+     cursor: pointer;
+ }
+/* ====================== tags ====================== */
+main .tags{
+    display: flex;
+    z-index: -2000PX;
+    margin-top: -2%;
+    margin-left: 17%;
+}
+
+main .tags .perto{
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+    font-family: montserrat;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 140px;
+    border-radius: 30px;
+    text-decoration: none;
+    /*padding-left: 2.5vw;*/
+}
+
+main .tags .perto:hover{
+    box-shadow: 0px 4px 14px 2px rgba(130, 87, 229, 0.8);
+}
+
+main .tags .infantil{
+    background-color: var(--color-dark-pink);
+    color: var(--color-white);
+    font-family: montserrat;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 140px;
+    border-radius: 30px;
+    /*padding-left: 2.5vw;*/
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+main .tags .infantil:hover{
+    box-shadow: 0px 4px 14px 2px rgba(242, 5, 135, 0.55);
+}
+
+main .tags .fundamental{
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    font-family: montserrat;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 140px;
+    border-radius: 30px;
+    /*padding-left: 2.5vw;*/ 
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+main .tags .fundamental:hover{
+    box-shadow: 0px 4px 14px 2px rgba(4, 157, 191, 0.8);
+}
+
+main .tags .medio{
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+    font-family: montserrat;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 140px;
+    border-radius: 30px;
+    margin-left: 5%; 
+    text-decoration: none; 
+}
+
+main .tags .medio:hover{
+    box-shadow: 0px 4px 14px 2px rgba(242, 193, 136, 0.6);
+}
+
+main .tags img{
+    width: 45px;
+    height: 45px;
+    margin-left: 60px;
+    margin-top: 37.5px;
+    margin-bottom: 1vh;
+
+}
+
+main .tags p{
+    font-size: 1.3rem;
+    width: 130px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+/* ====================== casos ===========================================================*/
+
+main .caso{
+    background-color: var(--color-ligth);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding: 2%;
+}
+
+main .caso:hover{
+    box-shadow: 2px -2px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
+/*===============================infos=================*/
+main .caso .infos{
+    display: flex;
+
+}
+
+main .caso .infos img{
+    width: 80px;
+    height: 80px;
+    margin-top: -45px;
+}
+
+main .caso .infos .user{
+    margin-left: 2%;
+    width: 80%;
+}
+
+main .caso .infos .user .nome{
+    font-family: montserratBold;
+    font-size: 1.4rem;
+    color: var(--color-dark)
+}
+
+main .caso .infos .user .horario{
+    font-family: montserrat;
+    font-size: 1.0rem;
+    color: var(--color-dark);
+    margin-top: 2px;
+}
+
+main .caso .infos .proximo{
+    display: flex;
+}
+
+main .caso .infos .proximo div{
+    background-color: var(--color-dark-purple);
+    width: 15px;
+    height: 4px;
+    margin: 5px;
+}
+
+main .caso .infos .proximo p {
+    font-family: montserrat;
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-left: 3px;
+}
+
+
+/*================texto do caso =================*/
+
+main .caso .text{
+    margin-top: 3%;
+}
+
+main .caso .text p{
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    line-height: 25px;
+}
+
+
+
+main .caso .text h4{
+    font-family: montserratBold;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+/*=============================== ações =================*/
+
+main .caso .actions{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 2%;
+    border-top: #C4C4C4 solid 0.5px;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+main .caso .actions .fav{
+    align-content: center;
+    display: flex;
+    
+}
+
+main .caso .actions .hero{
+    align-content: center;
+    display: flex;
+    margin-left: 25%;
+}
+
+main .caso .actions .share{
+    align-content: center;
+    display: flex;
+    margin-left: 25%;
+}
+
+main .caso .actions p{
+    font-family: montserratLight;
+    font-size: 1.2rem;
+    margin-top: 18px;
+}
+
+main .caso .actions a{
+    font-family: montserratLight;
+    font-size: 1.2rem;
+    margin-top: 18px;
+    text-decoration: none;
+}
+
+main .caso .actions a:hover{
+    text-decoration: underline;
+}
+
+main .caso .actions .hero .sime{
+    background: url("../img/logo.png");
+}
+
+
+
+/*===============================fav=================*/
+
+main .caso .actions .fav .like input {
+    display: none;
+  }
+  
+main .caso .actions .fav .like {
+    margin-top: 5px;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    border-radius: 999px;
+    overflow: visible;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  main .caso .actions .fav .like .hearth {
+    background-image: url("https://assets.codepen.io/23500/Hashflag-YouJustStartedABook.svg");
+    background-size: calc(var(--size) * var(--frames)) var(--size);
+    background-repeat: no-repeat;
+    background-position-x: calc(var(--size) * (var(--frames) * -1 + 2));
+    background-position-y: calc(var(--size) * 0.01);
+    width: var(--size);
+    height: var(--size);
+  }
+  
+  main .caso .actions .fav .like input:checked + .hearth {
+    animation: like 1s steps(calc(var(--frames) - 3));
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes like {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: calc(var(--size) * (var(--frames) * -1 + 3));
+    }
+  }
+  @media (hover: hover) {
+    .like:hover {
+      background-color: #e1255e15;
+    }
+    .like:hover .hearth {
+      background-position-x: calc(var(--size) * (var(--frames) * -1 + 1));
+    }
+  }
+
+
+  

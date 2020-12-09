@@ -1,0 +1,418 @@
+/*arrumar detalhes do sidebar*/
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('/css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('/css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('/css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('/css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    justify-items: stretch;
+}
+
+header{
+    background-color: var(--color-ligth);
+    display: flex;
+    background-size: 100%; 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 10vh;
+    width: 100%;
+   
+}
+
+header .toogle{
+    background-color: var(--color-purple);
+    height: 10vh;
+    width: 5.5vw;
+    padding-left: 1.5vw;
+    padding-top: 2.2vh;
+    border-radius: 20px 20px 0px 0px;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+
+.toogle .one,
+.two ,
+.three {
+    background-color: var(--color-white);
+    width: 2.5vw;
+    height: 3px;
+    margin-top: 1vh;
+
+    /*transition-duration: 0.3s;*/
+}
+/*
+.toogle .one{
+    transform: rotate(45deg) translate(7px, 7px);
+}
+ .toogle .two{
+    opacity: 0;
+ }
+
+ .toogle .three{
+    transform: rotate(-45deg) translate(7px, -7px);
+}*/
+header .sidebar{
+    background-color: var(--color-purple);
+    height: 88vh;
+    margin-left: -1.5vw;
+    margin-top: 3.5vh;
+    width: 5.5vw;
+    border-radius: 0px 0px 25px 20px;
+    display: none;
+    z-index: 2;
+}
+
+header .sidebar .antes{
+    width: 5.5vw;
+    height: 10vh;
+    background-color: var(--color-purple);
+    border-radius: 0px 0px 20px 00px;
+    position: absolute;
+    z-index: 2;
+}
+header .sidebar .activity{
+    display: flex;
+}
+header .sidebar .activity .circle{
+    margin-top: 10vh;
+    margin-left: 1vw;
+    width: 3.5vw;
+    height: 8vh;
+    position: absolute;
+    background-color:var(--color-white);
+    z-index: 1;
+    border-radius: 100%;
+    /*border-bottom-left-radius: 100%;
+    border-top-left-radius: 100%;*/
+}
+header .sidebar .activity .cobrir{
+    background-color:var(--color-white);
+    width: 2.5vw;
+    height: 15vh;
+    z-index: 0;
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+header .sidebar .activity .icon{
+    height: 2vh;
+}
+header .sidebar .activity .icon img{
+    width: 2.5vw;
+    height: 6vh;
+    margin-left: 0.7vw;
+    margin-top: 1vh;
+}
+header .sidebar .depois{
+    width: 5.5vw;
+    height: 5vh;
+    background-color:var(--color-purple);
+    border-top-right-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -2vh;
+}
+
+header .sidebar .two{
+    background-color: var(--color-purple);
+    margin-left: 1vw;
+    margin-top: 6vh;
+}
+
+header .sidebar .two img{
+    width: 2vw;
+    height: 4.5vh;
+    margin-left: 0.7vw;
+    margin-top: 0.7vh;
+}
+
+header .sidebar .three{
+    background-color: var(--color-purple);
+    margin-top: 15vh;
+    margin-left: 1vw;
+}
+
+header .sidebar .three img{
+    width: 2.5vw;
+    height: 6vh;
+    margin-left: 0.7vw;
+    margin-top: 0.7vh;
+}
+
+header .sidebar .four{
+    margin-top: 18vh;
+    margin-left: 1vw;
+}
+
+header .sidebar .four img{
+    width: 2.5vw;
+    height: 6vh;
+    margin-left: 0.7vw;
+    margin-top: 1vh;
+}
+
+header .sidebar .five{
+    margin-top: 10vh;
+    margin-left: 1vw;
+}
+
+header .sidebar .five img{
+    width: 2.5vw;
+    height: 6vh;
+    margin-left: 0.7vw;
+    margin-top: 0.7vh;
+}
+
+header nav{
+    display: flex;
+    margin-left: 3vw;
+    padding-top: 1.5vh;
+}
+
+header nav .search{
+    border: var(--color-purple) solid 2px;
+    height: 6.6vh;
+    width: 38.7vw;
+    margin-top: 0.5vh;
+}
+
+header nav .search select{
+    -moz-appearance: none;
+    outline: none;
+    background-color:transparent;
+    color: var(--color-purple);
+    border: none;
+    margin-top: 1vh;
+    margin-left: 5px;
+    font-family:   montserratLight;
+    font-size: 1.6rem;
+    height: 4vh;
+    width: 10vw;
+}
+
+header nav .search .barra{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: var(--color-purple) solid 2px ;
+    padding-left: 0.3vw;
+    margin-left: 0.5vw;
+    height: 4vh;
+    margin-top: 1vh;
+    width: 27vw;
+    font-family: montserratLight;
+    color: var(--color-purple);
+    font-size: 1.6rem;
+}
+
+header nav .search .barra::-webkit-input-placeholder {
+    color: var(--color-purple);
+    font-size: 1.5rem;
+ }
+
+
+ header nav .notifications{
+     display: flex;
+     margin-left: 30vw;
+     height: 6vh;
+     margin-top: 1vh;
+ }
+
+ header nav .notifications img{
+     height: 5vh;
+     width: 2vw;
+     cursor: pointer;
+ }
+
+ header nav .notifications .alert{
+    border-radius: 70%;
+    /*border: var(--color-ligth) solid 2px;*/
+    background-color: var(--color-alert);
+    width: 0.8vw;
+    height: 2vh;
+    margin-left: -0.8vw;
+    z-index: 200px;
+    margin-top: 0.5vh;
+ }
+
+ header nav .notifications .drop-notifications{
+    background-color: var(--color-white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    height: 60vh;
+    margin-top: 7vh;
+    margin-left: -20vw;
+    width: 20vw;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: none;
+    overflow: auto;
+    z-index: 2;
+ }
+
+ header nav .notifications .drop-notifications .title{
+     font-family: montserratBold;
+     color: var(--color-dark-purple);
+     font-size: 1.4rem;
+     padding-bottom: 10px;
+ }
+
+ header nav .notifications .drop-notifications .content{
+     display: flex;
+     margin-top: 15px;
+     cursor: pointer;
+ }
+
+ /*
+ header nav .notifications .drop-notifications .content:hover{
+     background-color: #C1C1C1;
+ }*/
+
+ header nav .notifications .drop-notifications .content .user img{
+    width: 32px;
+    margin-left: -10px;
+    margin-right: 15px;
+ }
+
+ 
+ header nav .notifications .drop-notifications .content .text{
+     width: 10vw;
+ }
+
+ header nav .notifications .drop-notifications .content .text .not{
+    font-family: montserrat;
+ }
+
+ header nav .notifications .drop-notifications .content .text .time{
+    font-family: montserratMed;
+    color: var(--color-dark-purple);
+ }
+
+ header nav .notifications .drop-notifications .content .alert{
+    border-radius: 70%;
+    background-color: var(--color-alert);
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+    margin-top: -2px;
+ }
+
+
+ header nav .user{
+    margin-left: 1vw;
+    display: flex;
+    height: 6vh;
+    cursor: pointer;
+}
+
+header nav .user .profile{
+    margin-top: 0.5vh;
+    height: 6vh;
+    border: var(--color-purple) solid 2px;
+    border-radius: 70%;
+}
+
+header nav .user p{
+    text-transform: uppercase;
+    font-family: montserratBold;
+    color: var(--color-purple);
+    font-size: 1.6rem;
+    width: 8vw;
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+
+header nav .user .drop{
+    height: 2vh;
+    height: 0.8vw;
+    margin-left: 1vw;
+    margin-top: 2.6vh;
+}
+
+header nav .user .config{
+    background-color: var(--color-white);
+    height: 40vh;
+    width: 15vw;
+    margin-left: -14vw;
+    margin-top: 7vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: none;
+}
+
+header nav .user .config .option{
+    display: flex;
+    height: 6vh;
+    margin-top: 10px;
+}
+
+header nav .user .config .option img{
+    width: 32px;
+    height: 32px;
+}
+
+header nav .user .config .option p{
+    text-transform: lowercase;
+    font-family: montserratMed;
+    color: var(--color-purple);
+    font-size: 1.6rem;
+    width: 8vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}

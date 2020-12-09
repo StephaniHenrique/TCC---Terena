@@ -1,0 +1,259 @@
+:root{
+    --color-background: #F8F8F8;
+    --color-dark-text: #373737;
+    --color-ligth-text: #C2C2C2;
+    --color-ligth: #FFFFFF;
+    --color-purple: #8257E5;
+    --color-dark-purple: #3C038C;
+    --color-blue: #9CBEED;
+    --color-yellow: #E38540;
+    --color-pin: #F26087;
+  
+    /* variaveis */
+    --header-height: 3.5rem;
+    --nav-width: 68px;
+  
+    /*fonte*/
+    --normal-font-size: 1rem;
+    --body-font: montserrat;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* margens*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  
+  /* fontes */
+  @font-face {
+    font-family: montserrat;
+    src: url('../css/fonts/Montserrat-Regular.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBold;
+  src: url('../css/fonts/Montserrat-Bold.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratThin;
+  src: url('../css/fonts/Montserrat-Thin.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBlack;
+  src: url('../css/fonts/Montserrat-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: montserratMedium;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+  }
+  
+  @font-face {
+  font-family: sun;
+  src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+  }
+  
+  /* ------------ base ------------ */
+  *,::before,::after{
+    box-sizing: border-box;
+  }
+
+  /* ------------ title ------------ */
+  main .mainText .mainTitle{
+    color: var(--color-dark-purple);
+    display: flex;
+    font-family: montserratBold;
+    align-items: center;
+  }
+
+  main .mainText .mainTitle i{
+    font-size: var(--h2-font-size);
+  }
+
+  main .mainText .mainTitle h2{
+    font-size: var(--normal-font-size);
+  }
+  
+  main .mainText p{
+    color: var(--color-dark-text);
+    top: 0;
+    margin-top: -.5rem;
+  }
+
+  /* ------------ mobile grid  ------------ */
+  main .usersGrid{
+        align-items: center;
+        margin-top: 5vh;
+  }
+
+  main .userStudent{
+    background: #F26087;
+    box-shadow: inset -5px -5px 10px rgba(216, 201, 255, 0.57), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px #A43B57;
+    border-radius: 20px;
+    color: var(--color-ligth);
+    align-items: center;
+    text-align: center;
+  }
+
+  main .userStudent i{
+    font-size: var(--biggest-font-size);
+  }
+
+  main .userStudent h5{
+      font-family: montserratBold;
+  }
+
+  main .userDonor{
+    background: #9CBEED;
+    box-shadow: inset -5px -5px 10px rgba(216, 201, 255, 0.57), inset 5px 5px 10px rgba(170, 170, 204, 0.25), inset 10px 10px 20px #5075A8;
+    border-radius: 20px;
+    color: var(--color-ligth);
+    align-items: center;
+    text-align: center;
+  }
+
+  main .userDonor i{
+    font-size: var(--biggest-font-size);
+  }
+
+  main .userDonor h5{
+      font-family: montserratBold;
+  }
+
+  main .userSchool{
+    background: #E38540;
+    box-shadow: inset 10px 10px 12px #ad6531, 
+    inset -10px -10px 12px #ffa54f;
+    border-radius: 20px;
+    color: var(--color-ligth);
+    align-items: center;
+    text-align: center;
+  }
+
+  main .userSchool i{
+    font-size: var(--biggest-font-size);
+  }
+
+  main .userSchool h5{
+      font-family: montserratBold;
+  }
+  
+   /* ------------ media queries  ------------ */
+
+    /*mobile*/
+    @media screen and (min-width: 320px){
+        main .usersGrid{
+         display: block; 
+      }
+
+      main .userStudent{
+        width: 80vw;
+        padding: 1rem;
+        margin: 2vh 5vw 2vh 5vw;
+      }
+      main .userDonor{
+        width: 80vw;
+        padding: 1rem;
+        margin: 2vh 5vw 2vh 5vw;
+      }
+
+      main .userSchool{
+        width: 80vw;
+        padding: 1rem;
+        margin: 2vh 5vw 2vh 5vw;
+      }
+
+    }
+
+    @media screen and (min-width: 576px){
+        main .usersGrid{
+            display: grid;
+            grid-template-columns: 30vw 30vw 30vw;
+            transition: .5s;
+
+      }
+        main .userStudent{
+            width: 25vw;
+            padding: 1rem;
+            margin: 2vh 10vw 2vh 0vw;
+        }
+        main .userDonor{
+            width: 25vw;
+            padding: 1rem;
+            margin: 2vh 0vw 2vh 5vw;
+        }
+
+        main .userSchool{
+            width: 25vw;
+            padding: 1rem;
+            margin: 2vh 10vw 2vh 10vw;
+        }
+
+    }
+    /*tablet*/
+    @media screen and (min-width: 768px){
+        main .usersGrid{
+            display: grid;
+            grid-template-columns: 20vw 20vw 20vw;
+
+      }
+        main .userStudent{
+            width: 17vw;
+            padding: 1rem;
+            margin: 2vh 10vw 2vh 0vw;
+        }
+        main .userDonor{
+            width: 17vw;
+            padding: 1rem;
+            margin: 2vh 0vw 2vh 5vw;
+        }
+
+        main .userSchool{
+            width: 17vw;
+            padding: 1rem;
+            margin: 2vh 10vw 2vh 10vw;
+        }
+    }
+
+    /*desktop*/
+    @media screen and (min-width: 960px){
+        main .usersGrid{
+            display: grid;
+            grid-template-columns: 13vw 13vw 13vw;
+      }
+      main .userStudent{
+        width: 15vw;
+        padding: 1rem;
+        margin-right: 5vw;
+    }
+    main .userDonor{
+        width: 15vw;
+        padding: 1rem;
+        margin: 0 5vw;
+    }
+
+    main .userSchool{
+        width: 15vw;
+        padding: 1rem;
+        margin-right: 5vw;
+    }
+  }
+

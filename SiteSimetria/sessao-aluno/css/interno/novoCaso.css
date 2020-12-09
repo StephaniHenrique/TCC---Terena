@@ -1,0 +1,277 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('/css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('/css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('/css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('/css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+@font-face {
+    font-family: montserratSemiBold;
+    src: url('/css/fonts/Montserrat-SemiBold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    align-items: center;
+    justify-items: stretch;
+}
+
+
+
+main{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+}
+
+main .topo{
+    margin-bottom: 5vh;
+}
+
+main .topo .title{
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    font-size: 1.8rem;
+}
+
+main .topo .subtitle{
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 1vh;
+}
+
+
+.box {
+    padding: 1rem;
+    margin-left: 30vw;
+  }
+  
+  input[type=file] {
+    outline: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .foto {
+    width: 180px;
+    height: 140px;
+    border: var(--color-title) dashed 2px;
+    border-radius: 5px;
+    display: block;
+    padding: 30px;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    font-family: montserratLight;
+  }
+ 
+  .foto i {
+    display: block;
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+  .foto i,
+  .foto .title {
+    color: var(--color-title);
+    transition: 200ms color;
+  }
+  .foto:hover {
+    border: var(--color-purple) solid 2px;
+  }
+  .foto:hover i,
+  .foto:hover .title {
+    color: var(--color-purple);
+  }
+
+main form .infos{
+    display: flex;
+}
+
+
+main form .form-group{
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+main form .form-group .two{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    margin-right: 2%;
+    margin-left: 10px;
+}
+
+main form .form-group .two input{
+    width: 100%;
+    height: 100%;
+    color: var(--color-dark);
+    padding-top: 20px;
+    padding-left: 7px;
+    border: none;
+    outline: none;
+    font-family: montserrat;
+    background-color: transparent;
+}
+
+main form .form-group .two .date{
+    width: 100%;
+    height: 100%;
+    color:transparent;
+    font-family: montserrat;
+}
+
+main form .form-group .two .date:valid{
+    color: var(--color-dark);
+}
+
+
+main form .form-group .two .date:focus{
+    color: #000;
+}
+
+
+
+/*label antes*/  
+main form .form-group .two .label-title{
+    font-family: montserrat;
+    position: absolute;
+    bottom: -5px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    text-align: left;
+    pointer-events: none;
+    border-bottom: var(--color-dark-ligth) 1px solid;
+    padding-right: 40px;
+    
+}
+
+/*posição da label*/
+main form .form-group .two label span{
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+/*função para label subir*/
+main form .form-group .two input:focus + .label-title span, 
+.form-group input:valid + .label-title span{
+    transform: translateY(-150%);
+    font-size: 1.2rem;
+    color: var(--color-purple); 
+}
+main form .form-group .two input:focus + .label-title , 
+.form-group .two input:valid + .label-title{
+    border-bottom: var(--color-purple) 3px solid;
+}
+
+main form .desc{
+    margin-top:8vh;
+    margin-bottom: 5vh;
+    margin-left: 5px;
+}
+
+main form .desc input{
+    background-color: transparent;
+    width: 78vw;
+    border: var(--color-dark-ligth) 1px solid;
+    outline: none;
+    resize: both;
+    overflow: hidden;
+    margin-bottom: 8vh;
+    resize: vertical;
+}
+
+main form .desc textarea{
+    width: 78vw;
+    height: 25vh;
+    background-color: transparent;
+    border: var(--color-dark-ligth) 1px solid;
+    outline: none;
+    font-family: montserrat;
+    resize: vertical;
+    padding: 10px;
+}
+
+main form .desc label{
+    font-family: montserrat;
+    font-size: 1.4rem;
+}
+
+main form .desc textarea:focus {
+    border: var(--color-purple) 3px solid;
+}
+
+main form .btn-publicar{
+    width: 78.5vw;
+    height: 45px;
+    background-color: var(--color-dark-purple);
+    border: none;
+    color: var(--color-white);
+    font-family: montserratBold;
+    letter-spacing: 2PX;
+    outline: none;
+    margin-top: 5vh;
+}
+
+main form .btn-publicar:hover{
+    background-color: var(--color-dark-purple-hover);
+}

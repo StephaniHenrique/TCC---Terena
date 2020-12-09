@@ -1,0 +1,128 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('/css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('/css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('/css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('/css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+@font-face {
+    font-family: montserratSemiBold;
+    src: url('/css/fonts/Montserrat-SemiBold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    align-items: center;
+    justify-items: stretch;
+}
+
+
+
+main{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+}
+
+
+main .topo{
+    margin-bottom: 5vh;
+}
+
+main .topo .title{
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    font-size: 1.8rem;
+}
+
+main .topo .subtitle{
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 1vh;
+}
+
+main .container{
+    display: grid;
+    grid-template-columns: 13vw 13vw 13vw 13vw 13vw 13vw; 
+    margin-bottom: 5vh;
+}
+
+main .container .perfil{
+    background-color: var(--color-ligth);
+    width: 10vw;
+    height: 25vh;
+    padding: 3vh 2vw 0vh 2vw;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 2vw;
+}
+
+main .container .perfil:hover{
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+main .container .perfil img{
+    width: 6vw;
+}
+
+main .container .perfil p{
+    font-family: montserrat;
+    color: var(--color-dark);
+    text-align: center;
+    margin-top: 1vh;
+    font-weight: bold;
+}

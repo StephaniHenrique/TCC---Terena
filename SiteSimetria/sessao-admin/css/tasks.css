@@ -1,0 +1,161 @@
+
+    :root{
+        --color-background: #F8F8F8;
+        --color-dark-text: #373737;
+        --color-ligth-text: #C2C2C2;
+        --color-ligth: #FFFFFF;
+        --color-purple: #8257E5;
+        --color-dark-purple: #3C038C;
+        --color-blue: #9CBEED;
+        --color-yellow: #E38540;
+        --color-pin: #F26087;
+      
+        /* variaveis */
+        --header-height: 3.5rem;
+        --nav-width: 68px;
+      
+        /*fonte*/
+        --normal-font-size: 1rem;
+        --body-font: montserrat;
+        --biggest-font-size: 2.25rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+        --font-medium: 500;
+        --font-semi-bold: 600;
+      
+        /* margens*/
+        --mb-1: .5rem;
+        --mb-2: 1rem;
+        --mb-3: 1.5rem;
+        --mb-4: 2rem;
+        --mb-5: 2.5rem;
+        --mb-6: 3rem;
+      
+        /* z index */
+        --z-tooltip: 10;
+        --z-fixed: 100;
+      }
+      
+      
+      /* fontes */
+      @font-face {
+        font-family: montserrat;
+        src: url('../css/fonts/Montserrat-Regular.ttf');
+      }
+      
+      @font-face {
+      font-family: montserratBold;
+      src: url('../css/fonts/Montserrat-Bold.ttf');
+      }
+      
+      @font-face {
+      font-family: montserratThin;
+      src: url('../css/fonts/Montserrat-Thin.ttf');
+      }
+      
+      @font-face {
+      font-family: montserratBlack;
+      src: url('../css/fonts/Montserrat-Black.ttf');
+      }
+      
+      @font-face {
+        font-family: montserratMedium;
+        src: url('../css/fonts/Montserrat-Medium.ttf');
+      }
+      
+      @font-face {
+      font-family: sun;
+      src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+      }
+  
+       /* ------------ title ------------ */
+       main .mainText .mainTitle{
+        color: var(--color-dark-purple);
+        display: flex;
+        font-family: montserratBold;
+        align-items: center;
+      }
+    
+      main .mainText .mainTitle i{
+        font-size: var(--h2-font-size);
+      }
+    
+      main .mainText .mainTitle h2{
+        font-size: var(--normal-font-size);
+      }
+      
+      main .mainText p{
+        color: var(--color-dark-text);
+        top: 0;
+        margin-top: -.5rem;
+      }
+
+      main .container{
+        padding: .5rem;
+        border-radius: 10px;
+        background: #F5F5FA;
+        box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+      }
+    
+      main .container input{
+          padding: .5rem;
+          outline: none;
+          border: none;
+          background-color: transparent;
+          color: var(--color-purple);
+          font-family: montserratBold;
+          width: 100%;
+      }
+    
+      main .container input::placeholder{
+          color: var(--color-purple);
+          font-family: montserrat;
+      }
+    
+      main .notComplete{
+        margin-bottom: 2rem;
+      }
+      main .notComplete h5{
+          color: var(--color-purple);
+          font-family: montserratBold;
+          
+      }
+
+      main .notComplete .task{
+        color: var(--color-purple);
+        background: #F5F5FA;
+        padding: 1rem;
+        box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+
+      main .complete{
+        margin:2rem 0 2rem 0;
+      }
+
+      main .complete h5{
+        color: var(--color-purple);
+        font-family: montserratBold;
+    }
+
+    main .complete .task{
+      color: var(--color-purple);
+      background: #F5F5FA;
+      padding: 1rem;
+      background: #F0F0F3;
+      box-shadow: -1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+      
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .task i{
+        float: right;
+        margin-left: .5rem;
+        cursor: pointer;
+    }

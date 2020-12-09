@@ -1,0 +1,646 @@
+:root{
+  --color-background: #F8F8F8;
+  --color-dark-text: #373737;
+  --color-ligth-text: #C2C2C2;
+  --color-ligth: #FFFFFF;
+  --color-purple: #8257E5;
+  --color-dark-purple: #3C038C;
+  --color-blue: #9CBEED;
+  --color-yellow: #E38540;
+  --color-pin: #F26087;
+
+  /* variaveis */
+  --header-height: 3.5rem;
+  --nav-width: 68px;
+
+  /*fonte*/
+  --normal-font-size: 1rem;
+  --body-font: montserrat;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* margens*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /* z index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*
+@media screen and (min-width: 320px){
+
+}
+
+@media screen and (min-width: 576px){
+}
+
+/* tablet/
+@media screen and (min-width: 768px){
+}
+
+
+/*desktop/
+@media screen and (min-width: 960px){
+}
+*/
+
+
+/* fontes */
+@font-face {
+  font-family: montserrat;
+  src: url('../css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+font-family: montserratBold;
+src: url('../css/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+font-family: montserratThin;
+src: url('../css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+font-family: montserratBlack;
+src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+  font-family: montserratMedium;
+  src: url('../css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+font-family: sun;
+src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+/* ------------ base ------------ */
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: montserrat;
+  font-size:  var(--normal-font-size);
+  transition:  .5s;
+  background-color: var(--color-background);
+}
+
+/* variaveis de dark theme*/
+body.dark-theme{
+  --color-background: #F8F8F8;
+  --color-dark-text: #373737;
+  --color-ligth-text: #C2C2C2;
+  --color-ligth: #FFFFFF;
+  --color-purple: #8257E5;
+  --color-dark-purple: #3C038C;
+  --color-blue: #9CBEED;
+  --color-yellow: #E38540;
+  --color-pin: #F26087;
+}
+
+/* dark-theme*/
+.change-theme{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+/* ------------ header ------------ */
+
+.header{
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--color-ligth);
+  z-index: var(--z-fixed);
+  transition: .5s;
+}
+
+/* toogle */
+.header .header__toggle{
+  color: var(--color-purple);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* div para  notificações e configurações*/
+.header .header__infos{
+  display: flex;
+  top: 0;
+  overflow: hidden;
+}
+
+/* configurações do botão das notificações*/
+.header .header__infos .header__notifications{
+  color: var(--color-purple);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  height: calc(var(--header-height) - 3vh);
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-fixed);
+  overflow: hidden;
+  margin-left: 2rem;
+}
+.header .header__infos .header__notifications i{
+  cursor: pointer;
+}
+
+/* configurações do botão de perfil*/
+.header .header__profile{
+  margin-left: -1rem;
+  display: flex;
+  height: calc(var(--header-height) - 3vh);
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  z-index: var(--z-fixed);
+  overflow: hidden;
+}
+
+/* configurações do icon de perfil*/
+.header .header__profile img{
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  margin-left: .5rem;
+  border-radius: 50%;
+  border: var(--color-purple) solid 2px;
+  height: calc(var(--header-height) - 1.5rem);
+}
+
+/* configurações do texto de perfil*/
+.header .header__profile p{
+  color: var(--color-purple);
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: .2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50ch;
+}
+
+/* ------------ nav ------------ */
+/* configurações do sidebar*/
+.navbar{
+  position: fixed;
+  top: 0;
+  /*não mexa nessa propriedade*/
+  left: -30%;
+  /*calc(var(--nav-width) + 156px);*/
+  width: var(--nav-width);
+  height: 100vh;
+  background: #8257E5;
+  border-radius: 0 30px 30px 0px;
+  padding: .5rem 1rem 0 0;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+/* configurações da nav dentro do sidebar*/
+.navbar .nav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/*configurações de logotipo*/
+.navbar .nav .nav__logo, .nav__link{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem;
+}
+
+.nav__logo{
+  margin-bottom: 2rem;
+}
+
+.navbar .nav .nav__logo .nav__logo-icon{
+  width: 50px;
+  height: 42px;
+  margin-left: -1.4rem;
+}
+
+.navbar .nav .nav__logo .nav__logo-name{
+  color: var(--color-ligth);
+  font-family: sun;
+  font-size: 1.6rem;
+}
+
+.nav__link{
+  position: relative;
+  color: var(--color-ligth);
+  margin-bottom: 1.5rem;
+  transition: .3s;
+}
+
+.nav__icon{
+  font-size: 1.25rem;
+}
+
+/*para exibir o sidebar*/
+.show{
+  left: 0;
+}
+
+/**/
+.body-pd{
+  padding-left: calc(var(--nav-width) + 1rem);
+}
+
+.active{
+  color: var(--color-ligth);
+}
+
+.active::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width:  3px;
+  height: 32px;
+  background-color: var(--color-ligth);
+}
+
+
+
+
+/* === media queries */ 
+/*mobile*/
+@media screen and (min-width: 320px){
+  
+
+  .header .header__profile p{
+    font-size: 1rem;
+    margin-left: .5rem;
+  }
+
+  
+main .profile__infos{
+  background-color: var(--color-purple);
+  height: calc(var(--header-height) * 4);
+  width: 100%;
+  left: 0;
+  border-radius: 0px 0px 30px 30px;
+  color: var(--color-ligth);
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+main .profile__infos img{
+  height: calc(var(--header-height));
+  border-radius: 50%;
+  background-color: var(--color-dark-purple);
+  border: var(--color-dark-purple) solid 2px;
+  margin-top: 1.2rem;
+}
+
+main .profile__infos h4{
+  font-size: 1.2rem;
+}
+
+main .profile__infos p{
+  font-size: 1rem;
+  margin-top: -1rem;
+}
+
+
+main .infos__grid{
+  display: block;
+  /*grid-template-columns: 8rem 8rem ;
+  grid-template-rows: 7rem 7rem;*/
+  font-size: .8rem;
+  color: var(--color-dark-purple);
+  text-align: center;
+  justify-content: center;
+  margin-top: -2.5rem;
+  /*gap: 1rem;*/
+  /*padding-right: .5rem;
+  padding-left: .5rem;*/
+}
+
+main .infos__grid div{
+ background-color: var(--color-ligth);
+ padding: .5rem;
+ border-radius: 20px;
+ box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+ margin: 0rem 2rem 1rem 2rem;
+ 
+}
+
+main .local__infos .infos .title,
+main .local__infos .local__images .title {
+  display: flex;
+  color: var(--color-purple);
+  font-family: montserratBold;
+  align-items: center;
+}
+
+.l-main .herois .herois__grid{
+  display: grid;
+  grid-template-columns: 7rem 7rem;
+  gap: 1rem;
+}
+
+}
+
+@media screen and (min-width: 576px){
+   
+  .header .header__profile p{
+    font-size: 1.4rem;
+  }
+
+  main .infos__grid{
+    display: grid;
+    grid-template-columns: 9rem 9rem 9rem 9rem;
+    grid-template-rows: 8rem;
+    font-size: .8rem;
+    color: var(--color-dark-purple);
+    text-align: center;
+    margin-top: -2rem;
+    margin-left: -1rem;
+}
+
+
+
+  main .infos__grid div{
+    width: 6.5rem;
+    background-color: var(--color-ligth);
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+  }
+
+  .l-main .herois .herois__grid{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-auto-rows: 25vh;
+    gap: 1rem;
+  }
+
+  .l-main .casos__cadastrados .cadastrados__grid,
+  .l-main .casos__resolvidos .resolvidos__grid{
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    grid-auto-rows: auto;
+    gap: 10vw;
+  }
+
+}
+
+/* tablet*/
+@media screen and (min-width: 760px){
+  :root{
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+
+  body{
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+
+  .header{
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+  }
+  
+  .navbar{
+    left: 0;
+    padding: 1rem 1rem 0 0;
+  }
+
+  .show{
+    width: calc(var(--nav-width) + 156px);
+  }
+
+  .body-pd{
+    padding-left: calc(var(--nav-width) + 185px);
+  }
+
+  .l-main .casos__cadastrados .cadastrados__grid,
+  .l-main .casos__resolvidos .resolvidos__grid{
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    grid-auto-rows: auto;
+    gap: 5vw;
+  }
+ 
+  
+}
+
+
+/*desktop*/
+@media screen and (min-width: 960px){
+  main .profile__infos{
+   width: 100%;
+  }
+
+  main .infos__grid{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 8rem;
+    font-size: .8rem;
+    color: var(--color-dark-purple);
+    text-align: center;
+    margin-top: -2rem;
+    margin-left: -1rem;
+}
+
+
+
+  main .infos__grid div{
+    width: 9rem;
+    background-color: var(--color-ligth);
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+
+  .l-main .casos__cadastrados .cadastrados__grid,
+  .l-main .casos__resolvidos .resolvidos__grid{
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-auto-rows: auto;
+    gap: 3vw;
+  }
+ 
+  .l-main .herois .herois__grid{
+    display: grid;
+    grid-template-columns:15vw 15vw 15vw 15vw  15vw  ;
+    grid-auto-rows: 25vh;
+    gap: 1rem;
+  }
+}
+
+main .local__infos{
+  padding: 1rem;
+}
+
+
+/*
+main .local__infos .local__images{
+  /*display: block;/
+  text-align: center;
+} 
+
+main .local__infos .local__images .box {
+  border: var(--color-ligth-text) dashed 2px;
+  /*padding: 3rem 1rem;/
+  color: var(--color-ligth-text);
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  
+}
+
+main .local__infos .local__images .box input[type=file] {
+  outline: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.box:hover {
+  border: var(--color-purple) solid 2px;
+}
+*/
+
+.l-main .casos__cadastrados,
+.l-main .casos__resolvidos {
+  padding: 1rem;
+}
+
+.l-main .casos__cadastrados .title,
+.l-main .casos__resolvidos .title{
+  display: flex;
+  color: var(--color-purple);
+  align-items: center;
+  font-family: montserratBold
+}
+
+.l-main .casos__cadastrados .cadastrados__grid .caso,
+.l-main .casos__resolvidos .resolvidos__grid .caso{
+  background-color: var(--color-ligth);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.l-main .casos__cadastrados .cadastrados__grid .caso:hover,
+.l-main .casos__resolvidos .resolvidos__grid .caso:hover{
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.l-main .casos__cadastrados .cadastrados__grid .caso .user,
+.l-main .casos__resolvidos .resolvidos__grid .caso .user{
+  align-items: center;
+  display: flex;
+}
+
+.l-main .casos__cadastrados .cadastrados__grid .caso .user img,
+.l-main .casos__resolvidos .resolvidos__grid .caso .user img{
+  border: var(--color-purple) solid 2px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  margin-right: 1rem;
+}
+
+.l-main .casos__cadastrados .cadastrados__grid .caso .user h4,
+.l-main .casos__resolvidos .resolvidos__grid  .caso .user h4{
+  color: var(--color-purple);
+  font-family: montserratBold;
+}
+
+.l-main .casos__cadastrados .cadastrados__grid .caso p
+.l-main .casos__resolvidos .resolvidos__grid .caso p{
+  line-height: 25px;
+}
+
+.l-main .herois{
+  padding: 1rem;
+}
+
+.l-main .herois .title{
+  display: flex;
+  align-items: center;
+  color: var(--color-purple);
+  font-family: montserratBold;
+}
+
+.l-main .herois .herois__perfil{
+  background-color: var(--color-ligth);
+  padding: 1rem;
+  border-radius: 20px;
+  justify-content: center;
+  text-align: center;
+  font-family: montserratBold;
+  color: var(--color-purple);
+}
+
+
+
+.l-main .herois .herois__grid .herois__perfil img{
+  border: var(--color-purple) solid 2px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  height: var(--header-height);
+}
+
+.l-main .herois .herois__perfil:hover{
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+
+

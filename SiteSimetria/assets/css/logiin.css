@@ -1,0 +1,384 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     
+    /* font size*/
+    --text-grande: 2.25rem;
+    --text-h1: 1.5rem;
+    --text-h2: 1.25rem;
+    --text-h3: 1rem;
+    --text-normal: .930rem;
+    --text-pequena: .800rem;
+    --text-pequenina: .75rem;
+
+    /* index */
+    --fixed: 100;
+    --tool: 10;
+
+    --header: 3rem;
+
+    /*margin*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('./fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('./fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('./fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: sun;
+    src: url('./fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    background-color: var(--color-purple);
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 320px){
+
+.top{
+    display: none;
+}
+
+.infos__log{
+    text-align: center;
+    color: var(--color-ligth);
+}
+
+.infos__log h2{
+    font-size: var(--text-normal);
+}
+
+.infos__log .info__link{
+    font-size: var(--text-normal);
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    text-decoration: none;
+}
+
+form{
+    padding: 2rem;
+    text-align: center;
+}
+
+form .options{
+    margin-top: 5vh;
+    font-family: montserrat;
+    color: var(--color-white);
+    margin-bottom: 5vh;
+}
+
+form .options .check{
+    margin-right: 5vw;
+    display: flex;
+}
+form .options input[type=radio] {
+    position: relative;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+form .options input[type=radio]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background-color: var(--color-purple);
+    border: var(--color-white) solid 1px;
+    
+}
+
+form .options input[type=radio]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background-color:var(--color-dark-purple);
+    border: var(--color-dark-purple) solid 1px;
+    
+}
+form .options input[type=radio]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid var(--color-ligth);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    padding-top: 1px;
+}
+
+form .form-group{
+   margin-top: 10vh;
+   display: flex;
+   color: var(--color-ligth);
+   align-items: center;
+}
+
+
+main form .form-group .text{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-bottom: var(--color-ligth) 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: montserrat;
+    font-size: var(--text-normal);
+    width: 97vw;
+    margin-left: 2vw;
+    color: var(--color-ligth);
+    outline: none;
+}
+
+main form .form-group .text-two{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-bottom: var(--color-ligth) 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: montserrat;
+    font-size: var(--text-normal);
+    width: 97vw;
+    margin-left: 2vw;
+    color: var(--color-ligth);
+    outline: none;
+    
+    
+}
+
+main form .form-group .text::placeholder{
+    color: var(--color-white);
+   
+}
+main form .form-group .text-two::placeholder{
+    color: var(--color-white);
+   
+}
+
+main form .form-group #check {
+    visibility: hidden;
+    cursor: pointer;
+    margin-left: -2vw;
+    margin-top: 3vh;
+  }
+  
+  input#check::after {
+    visibility: visible;
+    content: "";
+    background:url('../img/eva_eye-off-2-fill.png') no-repeat scroll 0 0 ;
+    padding: 8px;
+  }
+  
+  input#check:checked::after {
+    content: "  ";
+    background:url('../img/feather_eye.png') no-repeat;
+    width: 10px;
+  }
+
+
+form .form-group .text::placeholder{
+    color: var(--color-ligth);
+}
+
+
+
+main form .entrar{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+    font-family: montserratBold;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    border: 0;
+    margin-top: 5vh;
+}
+
+main form .entrar:hover{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-dark-purple-hover);
+    color: var(--color-white);
+    font-family: montserratBold;
+    padding: 15px;
+    text-transform: uppercase;
+    border: 0;
+}
+
+}
+
+@media screen and (min-width: 960px){
+    .top{
+        display: grid;
+        grid-template-columns: 25vw 25vw 25vw 25vw;
+    }
+    
+    .top .sombra{
+        font-size: 4rem;
+        color: var(--color-purple);
+        font-family: montserratBlack;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--color-white);
+        letter-spacing: 2px;
+    }
+
+    .infos__log{
+        text-align: center;
+        color: var(--color-ligth);
+        display: flex;
+    }
+    
+    .infos__log h2{
+        font-size: var(--text-normal);
+    }
+    
+    .infos__log .info__link{
+        font-size: var(--text-normal);
+        font-family: montserratBold;
+        color: var(--color-dark-purple);
+        text-decoration: none;
+    }
+    
+    form{
+        max-width: 60vw;
+        margin-left: 18vw;
+    }
+
+    
+form .form-group{
+    margin-top: 10vh;
+    display: flex;
+    color: var(--color-ligth);
+    align-items: center;
+ }
+ 
+ 
+ main form .form-group .text{
+     -moz-appearance: none;
+     -webkit-appearance: none;
+     background-color: transparent;
+     border-bottom: var(--color-ligth) 1px solid;
+     border-top: 0;
+     border-left: 0;
+     border-right: 0;
+     font-family: montserrat;
+     font-size: var(--text-normal);
+     width: 97vw;
+     margin-left: 2vw;
+     color: var(--color-ligth);
+     outline: none;
+ }
+ 
+ main form .form-group .text-two{
+     -moz-appearance: none;
+     -webkit-appearance: none;
+     background-color: transparent;
+     border-bottom: var(--color-ligth) 1px solid;
+     border-top: 0;
+     border-left: 0;
+     border-right: 0;
+     font-family: montserrat;
+     font-size: var(--text-normal);
+     width: 97vw;
+     margin-left: 2vw;
+     color: var(--color-ligth);
+     outline: none;
+     
+     
+ }
+
+}
+
+@media screen and (min-width: 1300px ){
+    .top{
+        display: grid;
+        grid-template-columns: 22vw 22vw 22vw 22vw;
+        gap: 4vw;
+
+    }
+    
+    .top .sombra{
+        font-size: 4rem;
+        color: var(--color-purple);
+        font-family: montserratBlack;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--color-white);
+        letter-spacing: 2px;
+    }
+
+    .infos__log{
+       margin-left: 12vw;
+       
+    }
+
+    .infos__log h2,
+    .infos__log .info__link{
+        font-size: var(--text-h2);
+    }
+
+    .infos__log .info__link{
+        margin-left: 1rem;
+        font-family: montserratBlack;
+    }
+
+}

@@ -1,0 +1,522 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('../css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    background-image: url('../img/fundo.png');
+    align-items: center;
+    justify-items: stretch;
+}
+
+
+/* ====================== topo e titulo ====================== */
+main .topo{
+    width: 100%;
+    height: 150px;
+    color: var(--color-white);
+    display: flex;
+    background-image: url('../img/top.png');
+
+}
+
+main .topo a{
+    margin-left: 2%;
+    margin-top: 4%;
+    align-items: center;
+}
+
+main .topo p{
+    font-family: montserratBold;
+    font-size: calc(1em + 1vw );
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+
+/* ====================== formulário ====================== */
+
+main .content{
+    width: 80vw;
+    background-color: var(--color-ligth);
+    margin-left: 10vw;
+    margin-top: -45px;
+    margin-bottom: 10vh;
+    padding-bottom: 5vh;
+    z-index: 1;
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.25);
+   /* border-radius: 30px;*/
+}
+
+main .content form .progress ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    background-color: var(--color-detail);
+    height: 3px;
+    margin-top: 10vh;
+    border-radius: 15px;
+}
+
+main .content form .progress ul .one{
+    padding-left: 14%;
+    padding-right: 16%;
+}
+
+main .content form .progress ul .two{
+    padding-left: 13%;
+    padding-right: 15%;
+}
+
+main .content form .progress ul .three{
+    padding-left: 16%;
+    padding-right: 15%;
+}
+
+main .content form .progress ul li .text{
+    background-color: var(--color-ligth);
+    border: var(--color-purple) 2px solid;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-top: -12px;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 1.4rem;
+    color: var(--color-purple);
+    font-family: montserratBold;
+    cursor: pointer;
+}
+
+main .content form .progress ul .active{
+    background-color: var(--color-purple);
+}
+
+main .content form .progress ul li .ativo{
+    color: var(--color-ligth);
+    background-color: var(--color-purple);
+}
+
+main form{
+    width: 70vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 980px;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+
+main form h3{
+    color: #1E2732;
+    font-family: montserratMed;
+    font-size: 2.0rem;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 10%;
+}
+
+main form .cadastro{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+    font-family: montserratMed;
+    margin-bottom: 10%;
+    padding: 15px;
+}
+
+main form .cadastro:hover{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-dark-purple-hover);
+    color: var(--color-white);
+    font-family: montserratMed;
+    margin-bottom: 10%;
+    padding: 15px;
+    border: 0;
+    margin-bottom: 12%;
+}
+
+
+
+main form input{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: var(--color-dark-ligth) 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-left: 15px;
+    margin-top: 40px;
+    padding-top:15px;
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark-ligth);
+    outline: none;
+}
+
+
+main form .form-group select{
+    -moz-appearance: none;
+    border-bottom: var(--color-dark-ligth) 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark-ligth);
+    /* esse pading influência no texto exibido dentro do select*/
+    padding-top:15px;
+    margin-left: 15px;
+    margin-top: 40px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+}
+main .content form .segundo{
+    position: relative;
+    display: none;
+}
+main .content form .terceiro{
+    position: relative;
+    display: none;
+}
+
+main .content form .primeiro{
+    border-style: none;
+}
+main .content form .primeiro .btn-next{
+    background-color: var(--color-dark-purple);
+    width: 125px;
+    height: 45px;
+    font-size: 1.4rem;
+    font-family: montserratBold;
+    color: var(--color-ligth);
+    letter-spacing: 2PX;
+    padding-top: 15px;
+    text-transform: uppercase;
+    margin-top: 7vh;
+    margin-left: 86%;
+    cursor: pointer;
+}
+
+main .content form .primeiro .btn-next:hover{
+    background-color: var(--color-dark-purple-hover);
+}
+
+
+main .content form .segundo{
+    border-style: none;
+    
+}
+
+main .content form .segundo .btns{
+    display: flex;
+}
+
+main .content form .segundo .btn-back{
+    background-color: var(--color-dark-purple);
+    width: 125px;
+    height: 45px;
+    font-size: 1.4rem;
+    font-family: montserratBold;
+    color: var(--color-ligth);
+    letter-spacing: 2PX;
+    padding-top: 15px;
+    text-transform: uppercase;
+    margin-top: 7vh;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+main .content form .segundo .btn-next{
+    background-color: var(--color-dark-purple);
+    width: 125px;
+    height: 45px;
+    font-size: 1.4rem;
+    font-family: montserratBold;
+    color: var(--color-ligth);
+    letter-spacing: 2PX;
+    padding-top: 15px;
+    text-transform: uppercase;
+    margin-top: 7vh;
+    margin-left: 45vw;
+    cursor: pointer;
+}
+
+main .content form .terceiro{
+    border-style: none;
+    
+}
+
+main .content form .terceiro .btns{
+    display: flex;
+    margin-top: 5vh;
+}
+
+main .content form .terceiro .btn-back{
+    background-color: var(--color-dark-purple);
+    width: 125px;
+    height: 45px;
+    font-size: 1.4rem;
+    font-family: montserratBold;
+    color: var(--color-ligth);
+    letter-spacing: 2PX;
+    padding-top: 15px;
+    text-transform: uppercase;
+    margin-top: 7vh;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+main .content form .terceiro .btn-next{
+    background-color: var(--color-dark-purple);
+    width: 125px;
+    height: 45px;
+    font-size: 1.4rem;
+    font-family: montserratBold;
+    color: var(--color-ligth);
+    letter-spacing: 2PX;
+    text-transform: uppercase;
+    margin-top: 7vh;
+    margin-left: 45vw;
+    cursor: pointer;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 60px;
+}
+
+
+/*======================== FORMATAÇÃO PARA UM CAMPO ===============================*/
+main form .form-group{
+    display: flex;
+}
+
+main form .form-group .one{
+    position: relative;
+    width: 98%;
+    height: 50px;  
+}
+
+main form .form-group .one input{
+    width: 100%;
+    height: 100%;
+    color: var(--color-dark-ligth);
+    padding-top: 20px;
+    padding-left: 7px;
+    border: none;
+}
+
+/*label antes*/ 
+main form .form-group .one .label-title{
+    font-family: montserrat;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    text-align: left;
+    pointer-events: none;
+    border-bottom: var(--color-dark-ligth) 1px solid;
+    padding-right: 0px;
+}
+
+/*posição da label*/
+main form .form-group .one label span{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+/*função para label subir*/
+main form .form-group .one input:focus + .label-title span, 
+.form-group input:valid + .label-title span{
+    transform: translateY(-150%);
+    font-size: 1.2rem;
+    color: var(--color-purple); 
+}
+main form .form-group .one input:focus + .label-title , 
+.form-group .one input:valid + .label-title{
+    border-bottom: var(--color-purple) 3px solid;
+}
+
+/*======== um campo -select ================== */
+
+main form .form-group .one select{
+    width: 100%;
+    height: 100%;
+    color: var(--color-dark-ligth);
+    padding-top: 20px;
+    padding-left: 7px;
+    border: none;
+}
+
+/*função para label subir*/
+main form .form-group .one select:focus + .label-title span, 
+.form-group select:valid + .label-title span{
+    transform: translateY(-150%);
+    font-size: 1.2rem;
+    color: var(--color-purple); 
+}
+
+main form .form-group .one selct:focus + .label-title , 
+.form-group .one select:valid + .label-title{
+    border-bottom: var(--color-purple) 3px solid;
+}
+
+/*formatação de campo de uf*/
+main form .form-group .one .drop option{
+    color: var(--color-dark-ligth);
+}
+
+
+/*======================== FORMATAÇÃO PARA DOIS CAMPO ===============================*/
+
+
+main form .form-group .two{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    margin-right: 2%;
+    
+}
+
+main form .form-group .two input{
+    width: 100%;
+    height: 100%;
+    color: var(--color-dark-ligth);
+    padding-top: 20px;
+    padding-left: 7px;
+    border: none;
+
+
+}
+
+main form .form-group .two .date{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+
+}
+
+main form .form-group .two .date:valid{
+    color: var(--color-dark);
+}
+
+
+main form .form-group .two .date:focus{
+    color: #000;
+}
+
+
+/**/
+main form .form-group .two .drop{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+
+}
+
+main form .form-group .two .drop:valid{
+    color: var(--color-dark);
+}
+
+
+main form .form-group .two .drop :focus{
+    color: #000;
+}
+
+/*label antes*/  
+main form .form-group .two .label-title{
+    font-family: montserrat;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    text-align: left;
+    pointer-events: none;
+    border-bottom: var(--color-dark-ligth) 1px solid;
+    padding-right: 40px;
+    
+}
+
+/*posição da label*/
+main form .form-group .two label span{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+/*função para label subir*/
+main form .form-group .two input:focus + .label-title span, 
+.form-group input:valid + .label-title span{
+    transform: translateY(-150%);
+    font-size: 1.2rem;
+    color: var(--color-purple); 
+}
+main form .form-group .two input:focus + .label-title , 
+.form-group .two input:valid + .label-title{
+    border-bottom: var(--color-purple) 3px solid;
+}
+

@@ -1,0 +1,174 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-yellow-ligth: #F2AA52;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+    --color-detail: #C4C4C4;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('/css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('/css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('/css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('/css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+@font-face {
+    font-family: montserratSemiBold;
+    src: url('/css/fonts/Montserrat-SemiBold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    align-items: center;
+    justify-items: stretch;
+}
+
+main{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 10vw;
+}
+
+main .topo .title{
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    font-size: 1.8rem;
+}
+
+main .topo .subtitle{
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 1vh;
+}
+
+main .pendencia{
+    margin-top: 8vh;
+    background-color: var(--color-alert);
+    border-radius: 10px;
+    height: 12vh;
+    width: 70vw;
+}
+
+main .fundo:hover{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+main .pendencia .fundo{
+    margin-top: -2vh;
+    margin-left: 1vw;
+    background-color: var(--color-ligth);
+    height: 12vh;
+    border-radius: 10px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 4vh;
+    padding-right: 1vh;
+    width: 80vw;
+    display: flex;
+}
+
+main .pendencia .fundo img{
+    margin-top: 1.5vh;
+    margin-right: 1.5vw;
+    height: 8vh;
+}
+
+main .pendencia .fundo .infos{
+    margin-top: 3vh;
+    width: 60vw;
+   
+}
+
+main .pendencia .fundo .infos .title{
+    font-family: montserratBold;
+    color: var(--color-dark);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+main .pendencia .fundo .infos .subtitle{
+    font-family: montserrat;
+    color: var(--color-detail);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+main .pendencia .fundo .prazo{
+    margin-top: 2.5vh;
+    width: 10vw;
+}
+
+main .pendencia .fundo .prazo .title{
+    font-family: montserrat;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+}
+
+main .pendencia .fundo .prazo .subtitle{
+    font-family: montserratBold;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 1vh;
+    margin-left: 4.5vw;
+}
+
+main .pendencia .fundo .alert{
+    width: 2vw;
+    margin-left: 0.5vw;
+    margin-top: 2vh;
+}
+
+main .pendencia .fundo .circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--color-alert);
+}
+

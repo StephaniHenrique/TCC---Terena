@@ -1,0 +1,234 @@
+:root{
+    --color-background: #F8F8F8;
+    --color-dark-text: #373737;
+    --color-ligth-text: #C2C2C2;
+    --color-ligth: #FFFFFF;
+    --color-purple: #8257E5;
+    --color-dark-purple: #3C038C;
+    --color-blue: #9CBEED;
+    --color-yellow: #E38540;
+    --color-pin: #F26087;
+
+  
+    /* variaveis */
+    --header-height: 3.5rem;
+    --nav-width: 68px;
+  
+    /*fonte*/
+    --normal-font-size: 1rem;
+    --body-font: montserrat;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* margens*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*
+  @media screen and (min-width: 320px){
+  
+  }
+  
+  @media screen and (min-width: 576px){
+  }
+  
+  /* tablet/
+  @media screen and (min-width: 768px){
+  }
+  
+  
+  /*desktop/
+  @media screen and (min-width: 960px){
+  }
+  */
+  
+  
+  /* fontes */
+  @font-face {
+    font-family: montserrat;
+    src: url('../css/fonts/Montserrat-Regular.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBold;
+  src: url('../css/fonts/Montserrat-Bold.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratThin;
+  src: url('../css/fonts/Montserrat-Thin.ttf');
+  }
+  
+  @font-face {
+  font-family: montserratBlack;
+  src: url('../css/fonts/Montserrat-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: montserratMedium;
+    src: url('../css/fonts/Montserrat-Medium.ttf');
+  }
+  
+  @font-face {
+  font-family: sun;
+  src: url('../css/fonts/Sunrise\ International\ Demo.otf');
+  }
+
+  
+  .add__aluno{
+      background-color: var(--color-dark-purple);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+  }
+
+  
+
+  
+
+  
+  @media screen and (min-width: 320px){
+
+    .add__aluno a{
+        text-decoration: none;
+        color: var(--color-ligth);
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .add__aluno a .add__infos{
+        display: flex;
+        align-items: center;
+    }
+
+    .add__aluno a .add__infos i{
+        font-size: var(--h1-font-size);
+        margin-right: .5rem;
+    }
+
+    .add__aluno a .add__infos h5{
+        font-size: var(--h3-font-size);
+    }
+
+    .add__aluno a i{
+        font-size: var(--h3-font-size);
+    }
+
+    
+  
+  }
+  
+  
+  @media screen and (min-width: 960px){
+
+    .add__aluno a i{
+        font-size: var(--h1-font-size);
+    }
+
+    .modal{
+        margin-left: 30vw;
+    }
+  }
+  
+
+
+  .modal{
+    background: var(--color-ligth);
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+
+main .modal .closeModal{
+    display: block;
+    text-align: right;
+}
+main .modal .closeModal .btn-close{
+    outline: none;
+    color: var(--color-purple);
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    font-size: var(--biggest-font-size);
+    cursor: pointer;
+}
+
+
+
+main .modal .dadosModal{
+    margin: 1rem;
+    line-height: 25px;
+}
+
+main .modal .motivoModal{
+    margin: 1rem;
+    line-height: 25px;
+}
+
+main .modal .motivoModal h3{
+    color: var(--color-purple);
+    font-family: montserratBold;
+}
+
+main .modal .motivoModal p{
+    line-height: 25px;
+    margin-top: -1rem;
+}
+
+main .modal .btn-modal{
+    margin: 1rem;
+    display: block;
+}
+
+.btn-anular{
+    background: #C0C0C0;
+    border-radius: 12.446px;
+    padding: 1rem;
+    color: #6D6D6D;
+    font-family: montserratBold;
+    text-align: center;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.btn-excluir{
+    background: var(--color-purple);
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--color-ligth);
+    font-family: montserratBold;
+    text-align: center;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+
+.btn-excluir:hover{
+    background: var(--color-dark-purple);
+}

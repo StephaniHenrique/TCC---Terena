@@ -1,0 +1,575 @@
+
+:root {
+    --color-purple: #8257E5;
+    --color-yellow: #F2C188;
+    --color-blue: #45A7D1;
+    --color-dark-blue:#049DBF;
+    --color-pink: #F26087;
+    --color-dark-pink:#F20587;
+    --color-white: #f8f8f8;
+    --color-ligth: #ffffff;
+    --color-dark: #171D24;
+    --color-title: #3F4B5A;
+    --color-dark-ligth: #3F4B5A;
+    --color-dark-purple: #3C048D;
+    --color-dark-purple-hover: #2D0469;
+    --color-alert: #DC002E;
+     /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
+
+/* fontes */
+@font-face {
+        font-family: montserrat;
+        src: url('/css/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('/css/fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('/css/fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: montserratMed;
+    src: url('/css/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face{
+    font-family: montserratLight;
+    src: url('/css/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: sun;
+    src: url('/css/fonts/Sunrise\ International\ Demo.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    align-items: center;
+    justify-items: stretch;
+}
+
+body a{
+    text-decoration: none;
+}
+
+.topo{
+    background-color: var(--color-purple);
+    height: 35vh;
+    padding:  5vh 10vW 10vh 10vw ;
+    border-radius: 0px 0px 60px 60px;
+    z-index: -2;
+    position: relative;
+}
+
+.topo .infos{
+    display: flex;
+}
+
+.topo .infos img{
+    margin-top: 2vh;
+    width: 10vw;
+    border: var(--color-dark-purple) solid 3px;
+    border-radius: 50%;
+}
+
+.topo .infos .user {
+    margin-top: 8vh;
+    margin-left: 3vw;
+    width: 40vw;
+}
+
+.topo .infos .user .title{
+    font-family: montserrat;
+    color: var(--color-white);
+    font-weight:bold;
+    font-size: 2rem;
+}
+
+.topo .infos .user .subtitle{
+    font-family: montserratThin;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    margin-top: 1vh;
+}
+
+.topo .infos .btn-criar{
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: montserratBold;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 2.5vh;
+    width: 15vw;
+    height: 8vh;
+    background-color: var(--color-dark-purple);
+    margin-top: 7.5vh;
+}
+
+.topo .infos .btn-criar:hover{
+    background-color: var(--color-dark-purple-hover);
+}
+
+.tags{
+    margin-top: -23vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    display: grid;
+    z-index: -1;
+    position: relative;
+}
+
+.tags .one{
+    width:  13vw;
+    height: 166px;
+    background-color: var(--color-ligth);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding-top: 3vh;
+    margin-left: 60vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin-bottom: 5vh;
+}
+
+.tags .one img{
+    margin-left: 2.5vw;
+    margin-top: 2vh;
+}
+
+.tags .one .paper{
+    margin-left: 3vw;
+}
+
+.tags .one .conq{
+    height: 52px;
+}
+
+.tags .one .paper{
+    margin-left: 3vw;
+}
+
+.tags .one .conq{
+    height: 52px;
+}
+
+.tags .one .title{
+    font-family: montserratBold;
+    color: var(--color-dark-purple);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.tags .one .subtitle{
+    font-family: montserrat;
+    color: var(--color-dark-purple);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.tags .one .subtitleb{
+    font-family: montserrat;
+    color: var(--color-dark-purple);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 3.5vh;
+}
+
+main{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    margin-bottom: 15vh;
+}
+
+/*====================================== meus casos cadastrados ===============================*/
+
+main .casos{
+    margin-bottom: 5vh;
+}
+
+main .casos .title{
+    display: flex;
+}
+
+main .casos .title img{
+    width: 35px;
+    height: 32px;
+}
+
+main .casos .title p{
+    font-family: montserratBold;
+    color: var(--color-title);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+main .casos .container{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw; 
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+main .casos .container .caso{
+    background-color: var(--color-ligth);
+    width: 18vw;
+    height: 40vh;
+    margin-left: 1vw;
+    border-radius: 15px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+main .casos .container .caso:hover{
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+main .casos .container .caso img{
+    margin-left: 5vw;
+    margin-top: -2vh;
+    width: 4vw;
+    border: var(--color-purple) solid 3px;
+    border-radius: 50%;
+}
+
+main .casos .container .caso .title{
+    font-family: montserratBold;
+    color: var(--color-dark);
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+main .casos .container .caso .texto{
+    font-family: montserrat;
+    color: var(--color-dark);
+    line-height: 15px;
+}
+
+main .casos .btn-mais{
+    background-color: var(--color-dark-purple);
+    width: 78vw;
+    margin-left: 1vw;
+    text-align: center;
+    color: var(--color-white);
+    font-family: montserratBold;
+    font-size: 1.4rem;
+    padding-top: 2.5vh;
+    height: 8vh;
+    cursor: pointer;
+}
+
+main .casos .btn-mais:hover{
+    background-color: var(--color-dark-purple-hover);
+}
+
+main .casos .container .disabled:before{
+    display: none;
+}
+
+
+
+/*====================================== minhas conquistas ===============================*/
+
+main .conquistas{
+    margin-top: 10vh;
+}
+
+main .conquistas{
+    margin-bottom: 5vh;
+}
+
+main .conquistas .title{
+    display: flex;
+}
+
+main .conquistas .title img{
+    width: 26px;
+    height: 30px;
+}
+
+main .conquistas .title p{
+    font-family: montserratBold;
+    color: var(--color-title);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+main .conquistas .container {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw; 
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+/*
+main .conquistas .container .off:before{
+    display: none;
+}
+
+main .conquistas .container .col .disabled{
+    margin-top: 2vh;
+    padding-left: 2vw;
+    text-align: center;
+}
+*/
+
+
+main .conquistas .container .col{
+    margin-top: 2vh;
+    padding-left: 2vw;
+    text-align: center;
+}
+
+main .conquistas .container .col .on{
+    width: 120x;
+    height: 100px;
+}
+
+main .conquistas .container .col .trofeu{
+    width: 90px;
+    height: 90px;
+}
+
+main .conquistas .container .col .title{
+    font-family: montserratBold;
+    margin-top: 2vh;
+    margin-left: 6vw;
+}
+
+main .conquistas .container .col .texto{
+    font-family: montserrat;
+    margin-top: 1vh;
+}
+
+main .conquistas .container .col .contador{
+    font-family: montserrat;
+    margin-top: 1vh;
+}
+
+/*====================================== minhas doações ===============================*/
+
+main .doacoes{
+    margin-top: 20vh;
+}
+
+main .doacoes .title{
+    display: flex;
+}
+
+main .doacoes .title img{
+    width: 35px;
+    height: 30px;
+}
+
+main .doacoes .title p{
+    font-family: montserratBold;
+    color: var(--color-title);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+main .doacoes .container{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw; 
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+main .doacoes .container .caso{
+    background-color: var(--color-ligth);
+    width: 16vw;
+    height: 25vh;
+    padding: 0px 1vw 1vw 1vw;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 2vw;
+}
+
+main .doacoes .container .caso:hover{
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+main .doacoes .container .caso img{
+    margin-top: -2vh;
+    margin-left: 5.6vw;
+}
+
+main .doacoes .container .caso .title{
+    font-family: montserratBold;
+    text-align: center;
+    margin-top: 2vh;
+    font-family: 1.2rem;
+}
+
+main .doacoes .container .caso .text{
+    font-family: montserrat;
+    margin-top: 2vh;
+    font-family: 1.2rem;
+    line-height: 15px;
+}
+
+.dados{
+    margin-top: -95vh;
+    margin-left: 10vw;
+    margin-bottom: 30vh;
+}
+
+.dados .infos{
+    margin-bottom: 3vh;
+}
+.dados .infos .title{
+    display: flex;
+}
+
+.dados .infos .title img{
+    width: 20px;
+}
+
+.dados .infos .title p{
+    font-family: montserratBold;
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+
+.dados p{
+    font-family: montserrat;
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    margin-left: 2.5vw;
+    margin-top: 1vh;
+}
+
+.dados .title{
+    display: flex;
+    margin-bottom: 4vh;
+}
+
+.dados .title img{
+    width: 24px;
+}
+
+.dados .title p{
+    font-family: montserratBold;
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    margin-left: 1vw;
+}
+
+.dados .fotos form{
+    display: flex;
+}
+
+.box {
+    padding: 1rem;
+  }
+  
+  input[type=file] {
+    outline: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .foto {
+    width: 180px;
+    height: 140px;
+    border: var(--color-title) dashed 2px;
+    border-radius: 5px;
+    display: block;
+    padding: 30px;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    font-family: montserratLight;
+  }
+ 
+  .foto i {
+    display: block;
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+  .foto i,
+  .foto .title {
+    color: var(--color-title);
+    transition: 200ms color;
+    text-align: center;
+  }
+
+  .foto .title{
+    margin-left: 2.5vw;
+  }
+  .foto:hover {
+    border: var(--color-purple) solid 2px;
+  }
+  .foto:hover i,
+  .foto:hover .title {
+    color: var(--color-purple);
+  }
+
+
+  
+header nav .user .drop{
+    height: 2vh;
+    height: 0.8vw;
+    margin-left: 1vw;
+    margin-top: 2.6vh;
+    z-index: 2;
+}
+
+header nav .user .config{
+    background-color: var(--color-white);
+    height: 40vh;
+    width: 15vw;
+    margin-left: -14vw;
+    margin-top: 7vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: none;
+}
+
+header nav .user .config .option{
+    display: flex;
+    height: 6vh;
+    margin-top: 10px;
+}
+
+header nav .user .config .option img{
+    width: 32px;
+    height: 32px;
+}
+
+header nav .user .config .option p{
+    text-transform: lowercase;
+    font-family: montserratMed;
+    color: var(--color-purple);
+    font-size: 1.6rem;
+    width: 8vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
