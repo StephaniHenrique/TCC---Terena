@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terena</title>
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <!-- portifolio -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="./js/team.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/time.css">
+
+</head>
+
+<body style="overflow-x: hidden; background-image: url(./img/fundo.png);">
+
+
+
+    <!------------------------------------------------------------------------------------------ menu ------------------------------------------------------------------------------------------------------------------>
+    <div class="menuFixed" id="menu">
+        <header class="container">
+            <nav>
+                <div class="flex">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="fill">
+                        <ul>
+                            <li class="teste"><a href="#home">Home</a></li>
+                            <li class="teste"><a href="#servicos">Serviços</a></li>
+                            <li class="teste"><a href="#sobre">Sobre</a></li>
+                            <li class="teste"><a href="#time">Time</a></li>
+                            <li class="teste"><a href="#portifolio">Portifolio</a></li>
+                            <li class="titandofil"><a class="btnContato" href="#contato">Contato <i
+                                        class="far fa-envelope"></i></a></li>
+                            <li class="icon">
+                                <img src="./img/menu.png" alt="" class="menu-icon">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <!-- -------------------------------------------------------------------------------------- fim menu --------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+    <!--------------------------------------------------------------------------------------- pagina home -------------------------------------------------------------------------------------------------------------->
+    <section class="container" id="home">
+        <div class="flexHomePage">
+            <div>
+                <div>
+                    <h1 id="tituloTerena">Terena</h1>
+                    <p>A empresa Terena surgiu junto com o
+                        objetivo de utilizar a tecnologia como
+                        ponte para um mundo mais inclusivo.
+                        E tem como nome, uma tribo indígena.
+                        Com isso, trazemos conosco o objetivo
+                        de desenvolver sistemas que visam
+                        incentivar e ajudar a população brasileira.
+                    </p>
+                    <a class="btnSaibaMais" href="#sobre" style="text-decoration: none;">Saiba Mais <i
+                            class="fas fa-arrow-right" style="font-size: 20px; padding: 0 0 0 20px; "></i></a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/fly.png" alt="" class=imgHome>
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------------ fim pagina home ------------------------------------------------------------------------------------------------------------->
+
+
+
+
+    <!---------------------------------------------------------------------------------- pagina serviços --------------------------------------------------------------------------------------------------------------->
+    <section class="containers" id="servicos">
+        <div class="container">
+            <div class="flexServicos">
+                <div data-anime>
+                    <img src="./img/projeto.png" alt="" class=imgHome>
+                </div>
+
+                <div data-anime="right">
+                    <div data-anime="right">
+                        <h3 class="fontApp">Simetria</h3>
+                        <h1 id="tituloServico">Pequenas doações, geram grandes mudanças</h1>
+                        <p>
+                            Uma aplicação Web e Mobile que permite que alunos
+                            publiquem os materiais escolares que precisam. Assim,
+                            outros usuários vão poder ver os casos e doar,
+                            contribuindo para a formação desses alunos e os incentivando.
+                        </p>
+                        <div style="display: flex;" data-anime="right">
+                            <i class="far fa-check-circle"
+                                style="font-size: 35px; margin-top: 20px; color: #2B9AE4;"></i>
+                            <p class="textGambiarra">
+                                Doar e receber doações de forma prática e segura.
+                            </p>
+                        </div>
+                        <div style="display: flex;" data-anime="right">
+                            <i class="far fa-check-circle"
+                                style="font-size: 35px; margin-top: 30px; color: #2B9AE4;"></i>
+                            <p class="textGambiarra">
+                                Ter uma timeline exclusiva que permita que você visualize
+                                os casos próximos a você.
+                            </p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;" class="btnDownloads">
+                            <button class="btnBaixar" data-anime="right"><i class="fab fa-apple"
+                                    style="font-size: 20px; padding: 0 10px 0 0;"></i> Download</button>
+                            <button class="btnBaixar google" data-anime="right"><i class="fab fa-google-play"
+                                    style="font-size: 20px; padding: 0 10px 0 0;"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------------------------- fim pagina serviços ------------------------------------------------------------------------------------------------------>
+
+
+
+
+    <!--------------------------------------------------------------------------------------------- pagina sobre ------------------------------------------------------------------------------------------------------->
+    <section class="containers" id="sobre">
+        <div class="container">
+        
+            <div class="flexSobre">
+                
+                <!--------------------------------------------- Missão ------------------------------------------->
+                <div data-anime style="background-color: white;">
+                    <button class="btnSaibaMais">Missão <i class="far fa-check-circle"
+                            style="font-size: 20px; padding: 0 0 0 10px;"></i></button>
+                    <h1 id="tituloMissao" class="titSobre">Diminuir a disparidade Social no Brasil com o auxilio da
+                        técnologia</h1>
+                    <p class="pSobre">
+                        Pensando no progresso do nosso pais e no aumento da qualidade de vida dos brasileiros,
+                        surgiu a ideia
+                        de criar uma empresa que tem como missão buscar soluções para os problemas enfrentados pela
+                        população
+                        brasileira. Para isso contamos com um grande aliado que está presente na vida de mais de 70%
+                        da população,
+                        a tecnologia.
+                    </p>
+                </div>
+
+
+                <!---------------------------------------------- Visão --------------------------------------------->
+                <div data-anime="right" style="background-color: white;">
+                    <button class="btnSaibaMais">Visão <i class="fas fa-chart-line"
+                            style="font-size: 20px; padding: 0 0 0 10px;"></i></button>
+                    <h1 id="tituloVisao" class="titSobre">Utilizar o conhecimento cientifico como ponte para um mundo
+                        mais inclusivo.</h1>
+                    <p class="pSobre">
+                        Com o aumento do uso da internet e técnologia e sua presença na casa de mais de 40% das
+                        pessoas, decidimos usar essa
+                        realidade para que a população possa ajudar e ser ajudada de forma prática e segura.
+                    </p>
+                </div>
+
+
+                <!---------------------------------------- Valores --------------------------------------------->
+                <div data-anime="right" style="background-color: white;">
+                    <button class="btnSaibaMais"> Valores <i class="far fa-star"
+                            style="font-size: 20px; padding: 0 0 0 10px;"></i></button>
+                    <h1 id="tituloValores" class="titSobre">Representatividade</h1>
+                    <p class="pSobre">
+                        Buscamos a inclusão e representatividade não só nos projetos, mas também na formação do time
+                        da empresa.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------------------ fim pagina sobre ------------------------------------------------------------------------------------------------------>
+
+
+
+
+    <!------------------------------------------------------------------------------------------ pagina time----------------------------------------------------------------------------------------------------------->
+    <section class="containers" id="time">
+        <div class="container">
+            <div class="wrapper">
+                <section class="module-team">
+                    <div class="team">
+
+                        <br><br><br><br><br><br><br><br>
+                        <h2 class="title" style="color:white">Time Terena</h2>
+                        <div class="team-cards">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="navigation">
+                                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+
+    </section>
+
+    </div>
+    </div>
+    </section>
+    <!------------------------------------------------------------------------------------------ fim pagina time------------------------------------------------------------------------------------------------------->
+
+
+
+    <!------------------------------------------------------------------------------------------ pagina portifolio ---------------------------------------------------------------------------------------------------->
+    <section class="containers" id="portifolio">
+        <br><br><br><br><br><br><br><br>
+        <center>
+            <h2 class="txtContato">Portifolio</h2>
+        </center>
+        <!-- <div class="container"> -->
+        <div class="flexPortifolio">
+
+            <div class="carousel" data-flickity='{ "autoPlay": true }'>
+                <div class="carousel-cell" style="background-image: url(./img/simeport.png);"></div>
+                <div class="carousel-cell" style="background-image: url(./img/contport.png);"></div>
+                <div class="carousel-cell" style="background-image: url(./img/app.png);"></div>
+                <div class="carousel-cell" style="background-image: url(./img/odyport.png);"></div>
+                <div class="carousel-cell" style="background-image: url(./img/sympanport.png);"></div>
+            </div>
+
+
+
+        </div>
+        <!-- </div>  -->
+    </section>
+    <!------------------------------------------------------------------------------------------ fim pagina portifolio ------------------------------------------------------------------------------------------------>
+
+
+
+    <!------------------------------------------------------------------------------------------ pagina contato ------------------------------------------------------------------------------------------------------->
+    <section class="containers" id="contato">
+        <div class="container">
+            <br><br><br><br><br><br>
+            <div class="flexServicos">
+                <div data-anime>
+
+                    <img src="./img/chat.png" alt="" class=imgContact>
+                </div>
+                <div data-anime="right" style="background-color: white; box-shadow: 0 0 20px rgba(0, 0, 0, 0.158);
+                border-top-left-radius: 15px;
+                border-bottom-right-radius: 15px;">
+                    <div data-anime="right" style="background-color: white;">
+                        <br><br>
+                        <h1 class="txtContato" id="tituloContato">Contato</h1>
+                        <p>Preencha o formulário abaixo para entrar em contato conosco, respostas via e-mail.</p>
+
+                        <form id="form">
+                            <!-- Formulario -->
+                            <div style="margin: 0;" data-anime>
+                                <input name="name" type="text" id="nome" class="feedback-input" placeholder="Nome" />
+
+                                <input name="email" type="email" id="email" class="feedback-input"
+                                    placeholder="E-mail" />
+
+                                <textarea name="text" class="feedback-input" id="mensagem" name="mensagem"
+                                    placeholder="Mensagem"></textarea>
+
+                                <button class="btnSaibaMais"> Enviar </button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------------------ fim pagina contato ---------------------------------------------------------------------------------------------------->
+
+
+
+
+    <!------------------------------------------------------------------------------------------ fo0ter ---------------------------------------------------------------------------------------------------------------->
+    <footer>
+        <div class="copy">
+            <div>
+                <img src="./img/logocomp.png" alt="" class="logof">
+            </div>
+            <div>
+                <h1 style="margin: 30px 0;">E-mail</h1>
+                <p style="color: rgba(122, 122, 122, 0.582);">terena@gmail.com</p>
+            </div>
+            <div>
+                <h1 style="margin: 30px 0;">Telefone</h1>
+                <p style="color: rgba(122, 122, 122, 0.582);"> +55 (11) 2551-9484</p>
+            </div>
+            <div class="social-media" style="margin: 70px 0;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="copy">
+
+            <div class="carousel-parcerias">
+                <div class="holder-parcerias">
+                    <img class="parcerias" src="./img/move.png" alt="" />
+                    <img class="parcerias" src="./img/culture.png" alt="" />
+                    <img class="parcerias" src="./img/ata.png" alt="" />
+                    <img class="parcerias" src="./img/avant.png" alt="" />
+                    <img class="parcerias" src="./img/Sirius.png" alt="" />
+                    <img class="parcerias" src="./img/move.png" alt="" />
+                    <img class="parcerias" src="./img/culture.png" alt="" />
+                    <img class="parcerias" src="./img/ata.png" alt="" />
+                    <img class="parcerias" src="./img/avant.png" alt="" />
+                    <img class="parcerias" src="./img/Sirius.png" alt="" />
+                    <img class="parcerias" src="./img/move.png" alt="" />
+                    <img class="parcerias" src="./img/culture.png" alt="" />
+                    <img class="parcerias" src="./img/ata.png" alt="" />
+                    <img class="parcerias" src="./img/avant.png" alt="" />
+                    <img class="parcerias" src="./img/Sirius.png" alt="" />
+                    <img class="parcerias" src="./img/move.png" alt="" />
+                    <img class="parcerias" src="./img/culture.png" alt="" />
+                    <img class="parcerias" src="./img/ata.png" alt="" />
+                    <img class="parcerias" src="./img/avant.png" alt="" />
+                    <img class="parcerias" src="./img/Sirius.png" alt="" />
+            
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!------------------------------------------------------------------------------------------ fim footer --------------------------------------------------------------------------------------------------------->
+
+</body>
+
+</html>
+
+<script src="./js/jquery-3.5.0.js"></script>
+
+<script>
+
+    $(window).scroll(() => {
+        var scroll = $(window).scrollTop();
+
+        if (scroll > 70) {
+            $('#menu').addClass('menu-auxiliar');
+        } else {
+            $('#menu').removeClass('menu-auxiliar');
+        }
+
+    });
+
+
+    $('a').click(function (e) {
+        e.preventDefault();
+
+        var id = $(this).attr('href'),
+            targetOffset = $(id).offset().top,
+            menuHeight = $('nav').innerHeight();
+        // console.log(e);
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, 1200);
+
+    });
+
+    function typeWriter(elemento) {
+        const textoArray = elemento.innerHTML.split('');
+        elemento.innerHTML = '';
+        for (let i = 0; i < textoArray.length; i++) {
+            setTimeout(() => elemento.innerHTML += textoArray[i], 150 * i);
+        }
+    }
+
+    const titulo = document.querySelector('#tituloTerena');
+    typeWriter(titulo);
+
+    const tituloServico = document.querySelector('#tituloServico');
+    typeWriter(tituloServico);
+
+    const tituloMissao = document.querySelector('#tituloMissao');
+    typeWriter(tituloMissao);
+
+    const tituloVisao = document.querySelector('#tituloVisao');
+    typeWriter(tituloVisao);
+
+    const tituloValores = document.querySelector('#tituloValores');
+    typeWriter(tituloValores);
+
+
+
+
+
+
+    const target = document.querySelectorAll('[data-anime]');
+    const animationClass = 'animate';
+
+    function animeScroll() {
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+        target.forEach(function (element) {
+            if ((windowTop) > element.offsetTop) {
+                element.classList.add(animationClass);
+            } else {
+                element.classList.remove(animationClass);
+            }
+        })
+    }
+
+    window.addEventListener('scroll', function () {
+        animeScroll();
+    })
+
+
+
+
+
+
+
+    /* Demo purposes only */
+    $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
+        }
+    );
+
+
+    $(document).ready(function ($) {
+
+        $('.card__share > a').on('click', function (e) {
+            e.preventDefault() // prevent default action - hash doesn't appear in url
+            $(this).parent().find('div').toggleClass('card__social--active');
+            $(this).toggleClass('share-expanded');
+        });
+
+    });
+
+
+
+
+</script>
